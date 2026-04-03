@@ -134,6 +134,7 @@ const LoginPage = () => {
               )}
 
               <button
+                id="send-code-button"
                 type="submit"
                 disabled={loading || phone.length !== 10}
                 className="w-full bg-gold text-black font-bold py-3 rounded-lg hover:bg-gold/90 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"

@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
       if (!window.recaptchaVerifier) {
         window.recaptchaVerifier = new RecaptchaVerifier(
           auth,
-          'recaptcha-container',
+          'send-code-button',
           {
             size: 'invisible',
             callback: (response) => {
@@ -94,7 +94,7 @@ export const AuthProvider = ({ children }) => {
       return true;
     } catch (error) {
       console.error('Error al iniciar sesión con teléfono:', error);
-      toast.error(error.message || 'Error al enviar el código');
+      toast.error(`Error al enviar el código: ${error.code} - ${error.message}`);
       window.recaptchaVerifier = null;
       return false;
     }
@@ -131,7 +131,7 @@ export const AuthProvider = ({ children }) => {
       return true;
     } catch (error) {
       console.error('Error al verificar OTP:', error);
-      toast.error('Código inválido. Intenta de nuevo');
+      toast.error(`Código inválido: ${error.code} - ${error.message}`);
       return false;
     }
   };
@@ -165,7 +165,6 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={value}>
       {children}
-      <div id="recaptcha-container" />
     </AuthContext.Provider>
   );
 };
