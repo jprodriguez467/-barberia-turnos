@@ -78,11 +78,12 @@ const LoginPage = () => {
     }
 
     setLoading(true);
-    const success = await verifyOTP(otpCode);
-
-    if (success) {
+    const success = await verifyOTP(otpCode, () => {
+      console.log('Navegando a /reservar después de verificación exitosa');
       navigate('/reservar');
-    } else {
+    });
+
+    if (!success) {
       setError('Código inválido. Intenta de nuevo');
       setOtp(['', '', '', '', '', '']);
       document.getElementById('otp-0')?.focus();

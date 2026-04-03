@@ -107,21 +107,27 @@ export const AuthProvider = ({ children }) => {
   };
 
   // Verificar OTP
-  const verifyOTP = async (otp) => {
+  const verifyOTP = async (otp, onSuccess) => {
+    console.log('Iniciando verificación de OTP');
     if (!confirmationResult) {
+      console.log('No hay confirmationResult');
       toast.error('No se encontró la confirmación. Intenta de nuevo');
       return false;
     }
 
     try {
+      console.log('Confirmando OTP...');
       const userCredential = await confirmationResult.confirm(otp);
       const currentUser = userCredential.user;
+      console.log('OTP confirmado, usuario:', currentUser.uid);
 
       // Crear o actualizar documento de usuario en Firestore
+      console.log('Buscando documento de usuario en Firestore...');
       const userRef = doc(db, 'usuarios', currentUser.uid);
       const userSnap = await getDoc(userRef);
 
       if (!userSnap.exists()) {
+        console.log('Creando nuevo documento de usuario');
         // Crear nuevo documento de usuario
         await setDoc(userRef, {
           uid: currentUser.uid,
@@ -130,10 +136,14 @@ export const AuthProvider = ({ children }) => {
           creadoEn: serverTimestamp(),
           ultimoTurno: null,
         });
+      } else {
+        console.log('Documento de usuario ya existe');
       }
 
       setConfirmationResult(null);
       toast.success('¡Sesión iniciada correctamente!');
+      console.log('Llamando onSuccess callback');
+      if (onSuccess) onSuccess();
       return true;
     } catch (error) {
       console.error('Error al verificar OTP:', error);
