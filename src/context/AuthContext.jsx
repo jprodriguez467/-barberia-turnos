@@ -50,23 +50,29 @@ export const AuthProvider = ({ children }) => {
 
   // Inicializar RecaptchaVerifier invisible
   const initializeRecaptcha = () => {
+    console.log('Inicializando reCAPTCHA...');
     try {
-      if (!window.recaptchaVerifier) {
-        window.recaptchaVerifier = new RecaptchaVerifier(
-          auth,
-          'send-code-button',
-          {
-            size: 'invisible',
-            callback: (response) => {
-              console.log('reCAPTCHA resuelto', response);
-            },
-            'expired-callback': () => {
-              console.log('reCAPTCHA expiró');
-              window.recaptchaVerifier = null;
-            },
-          }
-        );
+      if (window.recaptchaVerifier) {
+        console.log('Limpiando reCAPTCHA existente');
+        window.recaptchaVerifier.clear();
+        window.recaptchaVerifier = null;
       }
+      console.log('Creando nuevo RecaptchaVerifier');
+      window.recaptchaVerifier = new RecaptchaVerifier(
+        auth,
+        'send-code-button',
+        {
+          size: 'invisible',
+          callback: (response) => {
+            console.log('reCAPTCHA resuelto', response);
+          },
+          'expired-callback': () => {
+            console.log('reCAPTCHA expiró');
+            window.recaptchaVerifier = null;
+          },
+        }
+      );
+      console.log('RecaptchaVerifier creado exitosamente');
     } catch (error) {
       console.error('Error inicializando reCAPTCHA:', error);
     }
@@ -80,13 +86,13 @@ export const AuthProvider = ({ children }) => {
         ? phoneNumber
         : `+${phoneNumber}`;
 
-      initializeRecaptcha();
-
+      console.log('Llamando a signInWithPhoneNumber con', formattedPhone);
       const result = await signInWithPhoneNumber(
         auth,
         formattedPhone,
         window.recaptchaVerifier
       );
+      console.log('signInWithPhoneNumber completado');
 
       setConfirmationResult(result);
       setVerificationId(result.verificationId);
@@ -160,6 +166,7 @@ export const AuthProvider = ({ children }) => {
     loginWithPhone,
     verifyOTP,
     logout,
+    initializeRecaptcha,
   };
 
   return (

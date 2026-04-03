@@ -23,11 +23,7 @@ const ProtectedRoute = ({ children }) => {
 
 // Página de reserva (placeholder)
 const ReservePage = () => {
-  const { user, logout } = useAuth();
-
-  return (
-    <ReservarPage />
-  );
+  return <ReservarPage />;
 };
 
 // Página de administrador

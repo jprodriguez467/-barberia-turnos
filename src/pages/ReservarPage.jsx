@@ -15,6 +15,7 @@ import {
 import { db } from '../services/firebase';
 import toast from 'react-hot-toast';
 import { FiChevronLeft, FiChevronRight, FiCheck, FiClock, FiUser, FiCalendar, FiCheckCircle } from 'react-icons/fi';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 // Servicios por defecto (fallback)
 const DEFAULT_SERVICIOS = [
@@ -58,6 +59,7 @@ const DEFAULT_PROFESIONALES = [
 const ReservarPage = () => {
   const navigate = useNavigate();
   const { user, userDoc, logout } = useAuth();
+  console.log('ReservarPage render, user:', user);
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedService, setSelectedService] = useState(null);
   const [selectedProfesional, setSelectedProfesional] = useState(null);
@@ -552,54 +554,65 @@ const ReservarPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
-      {/* Header */}
-      <nav className="bg-gray-900 border-b border-gold/30">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
-          <div className="flex items-center gap-4">
-            <div className="text-sm text-gray-400">
-              {user?.phoneNumber}
+      {loading ? (
+        <div className="min-h-screen bg-black flex items-center justify-center">
+          <div className="text-center">
+            <AiOutlineLoading3Quarters className="text-4xl text-gold animate-spin mx-auto mb-4" />
+            <p className="text-gray-400">Cargando reservas...</p>
+          </div>
+        </div>
+      ) : (
+        <>
+          {/* Header */}
+          <nav className="bg-gray-900 border-b border-gold/30">
+            <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+              <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
+              <div className="flex items-center gap-4">
+                <div className="text-sm text-gray-400">
+                  {user?.phoneNumber}
+                </div>
+                <button
+                  onClick={logout}
+                  className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition"
+                >
+                  Cerrar sesión
+                </button>
+              </div>
             </div>
-            <button
-              onClick={logout}
-              className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition"
-            >
-              Cerrar sesión
-            </button>
+          </nav>
+
+          {/* Contenido principal */}
+          <div className="max-w-4xl mx-auto px-4 py-8">
+            {renderProgressBar()}
+
+            <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
+              {renderCurrentStep()}
+            </div>
+
+            {/* Navegación */}
+            {currentStep < 4 && (
+              <div className="flex justify-between mt-8">
+                <button
+                  onClick={prevStep}
+                  disabled={currentStep === 1}
+                  className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
+                >
+                  <FiChevronLeft className="w-5 h-5" />
+                  Anterior
+                </button>
+
+                <button
+                  onClick={nextStep}
+                  className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
+                >
+                  Siguiente
+                  <FiChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            )}
           </div>
-        </div>
-      </nav>
-
-      {/* Contenido principal */}
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {renderProgressBar()}
-
-        <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
-          {renderCurrentStep()}
-        </div>
-
-        {/* Navegación */}
-        {currentStep < 4 && (
-          <div className="flex justify-between mt-8">
-            <button
-              onClick={prevStep}
-              disabled={currentStep === 1}
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
-            >
-              <FiChevronLeft className="w-5 h-5" />
-              Anterior
-            </button>
-
-            <button
-              onClick={nextStep}
-              className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
-            >
-              Siguiente
-              <FiChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 };
