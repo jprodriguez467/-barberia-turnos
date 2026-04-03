@@ -70,6 +70,7 @@ src/
 ## Deploy
 
 - Frontend en Vercel:
+
   ```bash
   vercel deploy
   ```
@@ -92,8 +93,8 @@ src/
 
 ## Configuración de Twilio WhatsApp
 
-1. Crea un proyecto en https://www.twilio.com/ y ve al panel de *Programmable Messaging*.
-2. En el menú *Try it out*, selecciona *Try WhatsApp* y sigue las instrucciones para configurar Twilio Sandbox.
+1. Crea un proyecto en https://www.twilio.com/ y ve al panel de _Programmable Messaging_.
+2. En el menú _Try it out_, selecciona _Try WhatsApp_ y sigue las instrucciones para configurar Twilio Sandbox.
 3. Vincula tu número personal enviando el código generado al número de sandbox (ej.: `join sala-de-dioses`).
 4. Copia tus credenciales:
    - `TWILIO_ACCOUNT_SID`
