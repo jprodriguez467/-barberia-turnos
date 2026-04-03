@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   // Verificar OTP
-  const verifyOTP = async (otp, onSuccess) => {
+  const verifyOTP = async (otp) => {
     console.log('Iniciando verificación de OTP');
     if (!confirmationResult) {
       console.log('No hay confirmationResult');
@@ -142,8 +142,7 @@ export const AuthProvider = ({ children }) => {
 
       setConfirmationResult(null);
       toast.success('¡Sesión iniciada correctamente!');
-      console.log('Llamando onSuccess callback');
-      if (onSuccess) onSuccess();
+      console.log('Verificación OTP exitosa, retornando true');
       return true;
     } catch (error) {
       console.error('Error al verificar OTP:', error);
