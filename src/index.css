@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-black text-white;
+}
+
+/* Color personalizado para oro */
+:root {
+  --color-gold: #d4af37;
+  --color-gold-light: #e6c547;
+  --color-gold-dark: #b8941c;
+}
+
+/* Configurar colores personalizados en Tailwind */
+@layer utilities {
+  .text-gold {
+    @apply text-[#d4af37];
+  }
+  
+  .bg-gold {
+    @apply bg-[#d4af37];
+  }
+  
+  .border-gold {
+    @apply border-[#d4af37];
+  }
+  
+  .hover\:text-gold {
+    @apply hover:text-[#d4af37];
+  }
+  
+  .hover\:bg-gold {
+    @apply hover:bg-[#d4af37];
+  }
+  
+  .focus\:ring-gold {
+    @apply focus:ring-[#d4af37];
+  }
+  
+  .ring-gold {
+    @apply ring-[#d4af37];
+  }
+}
+
