@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
 
       setConfirmationResult(result);
       setVerificationId(result.verificationId);
-      toast.success('Código enviado por WhatsApp');
+      toast.success('Código enviado por SMS');
       return true;
     } catch (error) {
       console.error('Error al iniciar sesión con teléfono:', error);

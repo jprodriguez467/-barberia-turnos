@@ -148,7 +148,7 @@ const LoginPage = () => {
                     Enviando...
                   </>
                 ) : (
-                  'Recibir código por WhatsApp'
+                  'Recibir código por SMS'
                 )}
               </button>
             </form>
