@@ -6,7 +6,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { loginWithPhone, verifyOTP, confirmationResult, initializeRecaptcha } = useAuth();
+  const { loginWithPhone, verifyOTP, confirmationResult, initRecaptcha } = useAuth();
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [step, setStep] = useState('phone'); // 'phone' o 'otp'
@@ -34,7 +34,7 @@ const LoginPage = () => {
 
     setLoading(true);
     console.log('Inicializando reCAPTCHA en onClick');
-    initializeRecaptcha();
+    initRecaptcha();
     const formattedPhone = `+54${phone}`;
     const success = await loginWithPhone(formattedPhone);
 
@@ -223,6 +223,7 @@ const LoginPage = () => {
           Al continuar, aceptas nuestros términos y condiciones
         </p>
       </div>
+      <div id="recaptcha-container"></div>
     </div>
   );
 };

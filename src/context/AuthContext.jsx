@@ -49,42 +49,26 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   // Inicializar RecaptchaVerifier invisible
-  const initializeRecaptcha = () => {
-    console.log('Inicializando reCAPTCHA...');
-    try {
-      if (window.recaptchaVerifier) {
-        console.log('Limpiando reCAPTCHA existente');
-        window.recaptchaVerifier.clear();
+  const initRecaptcha = () => {
+    if (window.recaptchaVerifier) {
+      window.recaptchaVerifier.clear();
+      window.recaptchaVerifier = null;
+    }
+    window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+      size: 'invisible',
+      callback: () => {},
+      'expired-callback': () => {
         window.recaptchaVerifier = null;
       }
-      console.log('Creando nuevo RecaptchaVerifier');
-      window.recaptchaVerifier = new RecaptchaVerifier(
-        auth,
-        'send-code-button',
-        {
-          size: 'invisible',
-          callback: (response) => {
-            console.log('reCAPTCHA resuelto', response);
-          },
-          'expired-callback': () => {
-            console.log('reCAPTCHA expiró');
-            window.recaptchaVerifier = null;
-          },
-        }
-      );
-      console.log('RecaptchaVerifier creado exitosamente');
-    } catch (error) {
-      console.error('Error inicializando reCAPTCHA:', error);
-    }
+    });
   };
 
   // Login con teléfono
   const loginWithPhone = async (phoneNumber) => {
     try {
-      // Asegurar que el número tenga el formato correcto
-      const formattedPhone = phoneNumber.startsWith('+')
-        ? phoneNumber
-        : `+${phoneNumber}`;
+      // Asegurar que el número tenga el formato correcto +54XXXXXXXXXX
+      const cleanedPhone = phoneNumber.replace(/\D/g, '');
+      const formattedPhone = cleanedPhone.startsWith('54') ? `+${cleanedPhone}` : `+54${cleanedPhone}`;
 
       console.log('Llamando a signInWithPhoneNumber con', formattedPhone);
       const result = await signInWithPhoneNumber(
@@ -100,7 +84,7 @@ export const AuthProvider = ({ children }) => {
       return true;
     } catch (error) {
       console.error('Error al iniciar sesión con teléfono:', error);
-      toast.error(`Error al enviar el código: ${error.code} - ${error.message}`);
+      toast.error(`Error: ${error.code} - ${error.message}`);
       window.recaptchaVerifier = null;
       return false;
     }
@@ -175,7 +159,7 @@ export const AuthProvider = ({ children }) => {
     loginWithPhone,
     verifyOTP,
     logout,
-    initializeRecaptcha,
+    initRecaptcha,
   };
 
   return (
