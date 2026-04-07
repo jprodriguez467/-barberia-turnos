@@ -48,12 +48,12 @@ const DEFAULT_SERVICIOS = [
   },
 ];
 
-// Profesionales por defecto (fallback)
-const DEFAULT_PROFESIONALES = [
-  { id: 'carlos', nombre: 'Carlos M.', especialidad: 'Cortes clásicos', activo: true },
-  { id: 'rodrigo', nombre: 'Rodrigo V.', especialidad: 'Estilos modernos', activo: true },
-  { id: 'martin', nombre: 'Martín S.', especialidad: 'Barba y bigote', activo: true },
-  { id: 'lucas', nombre: 'Lucas T.', especialidad: 'Cortes premium', activo: true },
+// Horarios disponibles
+const HORARIOS = [
+  '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+  '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+  '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
+  '18:00'
 ];
 
 const ReservarPage = () => {
@@ -434,7 +434,15 @@ const ReservarPage = () => {
   // PASO 4: Confirmar
   const renderStep4 = () => {
     const priceInfo = calculatePrice(selectedService);
-    const profesional = profesionales.find(p => p.id === selectedProfesional.id);
+    const profesional = profesionales.find(p => p.id === selectedProfesional?.id);
+
+    if (!profesional) {
+      return (
+        <div className="text-center">
+          <p className="text-red-400">Error: Profesional no encontrado</p>
+        </div>
+      );
+    }
 
     return (
       <div className="space-y-6">
@@ -552,69 +560,88 @@ const ReservarPage = () => {
     setCurrentStep(prev => Math.max(prev - 1, 1));
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
-      {loading ? (
-        <div className="min-h-screen bg-black flex items-center justify-center">
-          <div className="text-center">
-            <AiOutlineLoading3Quarters className="text-4xl text-gold animate-spin mx-auto mb-4" />
-            <p className="text-gray-400">Cargando reservas...</p>
+  try {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
+        {loading ? (
+          <div className="min-h-screen bg-black flex items-center justify-center">
+            <div className="text-center">
+              <AiOutlineLoading3Quarters className="text-4xl text-gold animate-spin mx-auto mb-4" />
+              <p className="text-gray-400">Cargando reservas...</p>
+            </div>
           </div>
-        </div>
-      ) : (
-        <>
-          {/* Header */}
-          <nav className="bg-gray-900 border-b border-gold/30">
-            <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
-              <div className="flex items-center gap-4">
-                <div className="text-sm text-gray-400">
-                  {user?.phoneNumber}
+        ) : (
+          <>
+            {/* Header */}
+            <nav className="bg-gray-900 border-b border-gold/30">
+              <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
+                <div className="flex items-center gap-4">
+                  <div className="text-sm text-gray-400">
+                    {user?.phoneNumber}
+                  </div>
+                  <button
+                    onClick={logout}
+                    className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition"
+                  >
+                    Cerrar sesión
+                  </button>
                 </div>
-                <button
-                  onClick={logout}
-                  className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition"
-                >
-                  Cerrar sesión
-                </button>
               </div>
-            </div>
-          </nav>
+            </nav>
 
-          {/* Contenido principal */}
-          <div className="max-w-4xl mx-auto px-4 py-8">
-            {renderProgressBar()}
+            {/* Contenido principal */}
+            <div className="max-w-4xl mx-auto px-4 py-8">
+              {renderProgressBar()}
 
-            <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
-              {renderCurrentStep()}
-            </div>
-
-            {/* Navegación */}
-            {currentStep < 4 && (
-              <div className="flex justify-between mt-8">
-                <button
-                  onClick={prevStep}
-                  disabled={currentStep === 1}
-                  className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
-                >
-                  <FiChevronLeft className="w-5 h-5" />
-                  Anterior
-                </button>
-
-                <button
-                  onClick={nextStep}
-                  className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
-                >
-                  Siguiente
-                  <FiChevronRight className="w-5 h-5" />
-                </button>
+              <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
+                {renderCurrentStep()}
               </div>
-            )}
-          </div>
-        </>
-      )}
-    </div>
-  );
+
+              {/* Navegación */}
+              {currentStep < 4 && (
+                <div className="flex justify-between mt-8">
+                  <button
+                    onClick={prevStep}
+                    disabled={currentStep === 1}
+                    className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
+                  >
+                    <FiChevronLeft className="w-5 h-5" />
+                    Anterior
+                  </button>
+
+                  <button
+                    onClick={nextStep}
+                    className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
+                  >
+                    Siguiente
+                    <FiChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  } catch (error) {
+    console.error('Error en ReservarPage:', error);
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center text-white">
+          <h2 className="text-2xl font-bold text-red-400 mb-4">Error en la página</h2>
+          <p className="text-gray-400 mb-4">Ha ocurrido un error inesperado.</p>
+          <p className="text-sm text-gray-500">{error.message}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-gold text-black rounded hover:bg-gold/90"
+          >
+            Recargar página
+          </button>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default ReservarPage;
