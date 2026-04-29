@@ -14,7 +14,15 @@ import {
 } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import toast from 'react-hot-toast';
-import { FiChevronLeft, FiChevronRight, FiCheck, FiClock, FiUser, FiCalendar, FiCheckCircle } from 'react-icons/fi';
+import {
+  FiChevronLeft,
+  FiChevronRight,
+  FiCheck,
+  FiClock,
+  FiUser,
+  FiCalendar,
+  FiCheckCircle,
+} from 'react-icons/fi';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 // Servicios por defecto (fallback)
@@ -48,18 +56,30 @@ const DEFAULT_SERVICIOS = [
   },
 ];
 
+// ── FIX: faltaba este array → causaba crash en producción ────────────────────
+const DEFAULT_PROFESIONALES = [
+  {
+    id: 'juan',
+    nombre: 'Juan',
+    especialidad: 'Barbero',
+    foto: null,
+    activo: true,
+  },
+];
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Horarios disponibles
 const HORARIOS = [
   '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
   '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
   '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-  '18:00'
+  '18:00',
 ];
 
 const ReservarPage = () => {
   const navigate = useNavigate();
   const { user, userDoc, logout } = useAuth();
-  console.log('ReservarPage render, user:', user);
+
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedService, setSelectedService] = useState(null);
   const [selectedProfesional, setSelectedProfesional] = useState(null);
@@ -82,13 +102,13 @@ const ReservarPage = () => {
           setServicios(data.servicios || DEFAULT_SERVICIOS);
         }
 
-        // Cargar profesionales
+        // Cargar profesionales activos
         const profQuerySnapshot = await getDocs(collection(db, 'profesionales'));
         const profs = [];
-        profQuerySnapshot.forEach((doc) => {
-          const prof = doc.data();
-          if (prof.activo) { // Solo mostrar profesionales activos
-            profs.push({ id: doc.id, ...prof });
+        profQuerySnapshot.forEach((docSnap) => {
+          const prof = docSnap.data();
+          if (prof.activo) {
+            profs.push({ id: docSnap.id, ...prof });
           }
         });
         if (profs.length > 0) {
@@ -96,7 +116,6 @@ const ReservarPage = () => {
         }
       } catch (error) {
         console.error('Error cargando datos:', error);
-        // Mantener valores por defecto en caso de error
       } finally {
         setLoading(false);
       }
@@ -105,38 +124,40 @@ const ReservarPage = () => {
     loadData();
   }, []);
 
-  // Calcular precio con descuento basado en días desde último turno
+  // ── Calcular precio con descuento según días desde último corte ───────────
+  // Usa el campo "ultimoCorte" (consistente con AdminPage)
   const calculatePrice = (service) => {
-    if (!userDoc?.ultimoTurno) {
+    // Soporta tanto "ultimoCorte" (nuevo) como "ultimoTurno" (legacy) por compatibilidad
+    const ultimoCorteRaw = userDoc?.ultimoCorte || userDoc?.ultimoTurno;
+
+    if (!ultimoCorteRaw) {
       return { price: service.precios.normal, discount: null, message: null };
     }
 
-    const lastTurno = userDoc.ultimoTurno.toDate();
-    const now = new Date();
-    const diffTime = Math.abs(now - lastTurno);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const lastCorte = ultimoCorteRaw.toDate ? ultimoCorteRaw.toDate() : new Date(ultimoCorteRaw);
+    const diffTime = Math.abs(Date.now() - lastCorte.getTime());
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
     if (diffDays < 10) {
       return {
         price: service.precios.dias10,
         discount: service.precios.normal,
-        message: `¡Volviste en ${diffDays} días, precio especial!`
+        message: `¡Volviste en ${diffDays} días! Precio especial activo`,
       };
     } else if (diffDays < 15) {
       return {
         price: service.precios.dias15,
         discount: service.precios.normal,
-        message: `¡Volviste en ${diffDays} días, precio especial!`
+        message: `¡Volviste en ${diffDays} días! Precio especial activo`,
       };
     } else {
       return { price: service.precios.normal, discount: null, message: null };
     }
   };
 
-  // Consultar horarios ocupados para la fecha y profesional seleccionados
+  // Consultar horarios ocupados
   const fetchOccupiedSlots = async (date, profesionalId) => {
     if (!date || !profesionalId) return;
-
     try {
       const dateStr = date.toISOString().split('T')[0];
       const turnosRef = collection(db, 'turnos');
@@ -146,9 +167,8 @@ const ReservarPage = () => {
         where('fecha', '==', dateStr),
         where('estado', '==', 'confirmado')
       );
-
       const querySnapshot = await getDocs(q);
-      const occupied = querySnapshot.docs.map(doc => doc.data().hora);
+      const occupied = querySnapshot.docs.map((doc) => doc.data().hora);
       setOccupiedSlots(occupied);
     } catch (error) {
       console.error('Error obteniendo horarios ocupados:', error);
@@ -156,7 +176,6 @@ const ReservarPage = () => {
     }
   };
 
-  // Efecto para cargar horarios ocupados cuando cambian fecha o profesional
   useEffect(() => {
     if (selectedDate && selectedProfesional) {
       fetchOccupiedSlots(selectedDate, selectedProfesional.id);
@@ -166,30 +185,23 @@ const ReservarPage = () => {
   // Generar fechas del mes actual
   const generateCalendarDates = () => {
     const today = new Date();
-    const currentMonth = today.getMonth();
-    const currentYear = today.getFullYear();
-
-    const firstDay = new Date(currentYear, currentMonth, 1);
-    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+    const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
     const dates = [];
-
     for (let d = new Date(firstDay); d <= lastDay; d.setDate(d.getDate() + 1)) {
       dates.push(new Date(d));
     }
-
     return dates;
   };
 
-  // Formatear precio
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('es-AR', {
+  const formatPrice = (price) =>
+    new Intl.NumberFormat('es-AR', {
       style: 'currency',
       currency: 'ARS',
-      minimumFractionDigits: 0
+      minimumFractionDigits: 0,
     }).format(price);
-  };
 
-  // Confirmar turno
+  // ── Confirmar turno ───────────────────────────────────────────────────────
   const confirmTurno = async () => {
     if (!selectedService || !selectedProfesional || !selectedDate || !selectedTime) {
       toast.error('Completa todos los pasos antes de confirmar');
@@ -213,17 +225,17 @@ const ReservarPage = () => {
         estado: 'confirmado',
         recordatorio24h: false,
         recordatorio1h: false,
-        creadoEn: serverTimestamp()
+        creadoEn: serverTimestamp(),
       });
 
-      // Actualizar último turno del usuario
+      // ── FIX: campo renombrado a "ultimoCorte" (consistente con AdminPage) ──
       const userRef = doc(db, 'usuarios', user.uid);
       await updateDoc(userRef, {
-        ultimoTurno: selectedDate
+        ultimoCorte: serverTimestamp(),
       });
 
       toast.success('¡Turno confirmado exitosamente!');
-      navigate('/reservar'); // Recargar página para mostrar nuevo precio
+      navigate('/reservar');
     } catch (error) {
       console.error('Error confirmando turno:', error);
       toast.error('Error al confirmar el turno. Intenta de nuevo');
@@ -232,13 +244,13 @@ const ReservarPage = () => {
     }
   };
 
-  // Renderizar barra de progreso
+  // Barra de progreso
   const renderProgressBar = () => {
     const steps = [
-      { id: 1, label: 'Servicio', icon: FiCheck },
+      { id: 1, label: 'Servicio',   icon: FiCheck },
       { id: 2, label: 'Profesional', icon: FiUser },
       { id: 3, label: 'Fecha y Hora', icon: FiCalendar },
-      { id: 4, label: 'Confirmar', icon: FiCheckCircle }
+      { id: 4, label: 'Confirmar',  icon: FiCheckCircle },
     ];
 
     return (
@@ -247,17 +259,13 @@ const ReservarPage = () => {
           {steps.map((step, index) => (
             <React.Fragment key={step.id}>
               <div className={`flex flex-col items-center ${currentStep >= step.id ? 'text-gold' : 'text-gray-600'}`}>
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${
-                  currentStep >= step.id ? 'border-gold bg-gold text-black' : 'border-gray-600'
-                }`}>
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${currentStep >= step.id ? 'border-gold bg-gold text-black' : 'border-gray-600'}`}>
                   <step.icon className="w-5 h-5" />
                 </div>
                 <span className="text-xs mt-2 font-medium">{step.label}</span>
               </div>
               {index < steps.length - 1 && (
-                <div className={`flex-1 h-0.5 mx-4 ${
-                  currentStep > step.id ? 'bg-gold' : 'bg-gray-600'
-                }`} />
+                <div className={`flex-1 h-0.5 mx-4 ${currentStep > step.id ? 'bg-gold' : 'bg-gray-600'}`} />
               )}
             </React.Fragment>
           ))}
@@ -266,11 +274,30 @@ const ReservarPage = () => {
     );
   };
 
-  // PASO 1: Elegir servicio
+  // ── PASO 1: Elegir servicio ───────────────────────────────────────────────
   const renderStep1 = () => (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gold text-center mb-6">Elige tu servicio</h2>
-      <div className="grid gap-4 md:grid-cols-1 max-w-md mx-auto">
+
+      {/* Banner de descuento si aplica */}
+      {(userDoc?.ultimoCorte || userDoc?.ultimoTurno) && (() => {
+        const raw = userDoc?.ultimoCorte || userDoc?.ultimoTurno;
+        const fecha = raw.toDate ? raw.toDate() : new Date(raw);
+        const dias = Math.floor((Date.now() - fecha.getTime()) / (1000 * 60 * 60 * 24));
+        const restantes = 15 - dias;
+        if (restantes > 0) {
+          return (
+            <div className="max-w-md mx-auto bg-green-900/20 border border-green-500/30 rounded-lg p-3 text-center">
+              <p className="text-green-400 text-sm font-medium">
+                ¡Tenés descuento activo! Te quedan {restantes} días para precio especial
+              </p>
+            </div>
+          );
+        }
+        return null;
+      })()}
+
+      <div className="grid gap-4 max-w-md mx-auto">
         {servicios.map((servicio) => {
           const priceInfo = calculatePrice(servicio);
           return (
@@ -315,7 +342,7 @@ const ReservarPage = () => {
     </div>
   );
 
-  // PASO 2: Elegir profesional
+  // ── PASO 2: Elegir profesional ────────────────────────────────────────────
   const renderStep2 = () => (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gold text-center mb-6">Elige tu profesional</h2>
@@ -329,9 +356,13 @@ const ReservarPage = () => {
             }`}
           >
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <FiUser className="w-8 h-8 text-gray-400" />
-              </div>
+              {profesional.foto ? (
+                <img src={profesional.foto} alt={profesional.nombre} className="w-16 h-16 rounded-full mx-auto mb-4 object-cover" />
+              ) : (
+                <div className="w-16 h-16 bg-gray-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <FiUser className="w-8 h-8 text-gray-400" />
+                </div>
+              )}
               <h3 className="text-lg font-semibold text-white">{profesional.nombre}</h3>
               <p className="text-sm text-gray-400">{profesional.especialidad}</p>
             </div>
@@ -341,7 +372,7 @@ const ReservarPage = () => {
     </div>
   );
 
-  // PASO 3: Elegir fecha y hora
+  // ── PASO 3: Fecha y hora ──────────────────────────────────────────────────
   const renderStep3 = () => {
     const calendarDates = generateCalendarDates();
     const today = new Date();
@@ -350,35 +381,28 @@ const ReservarPage = () => {
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-gold text-center mb-6">Elige fecha y hora</h2>
 
-        {/* Calendario */}
         <div className="max-w-md mx-auto">
           <h3 className="text-lg font-semibold text-white mb-4 text-center">
             {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
           </h3>
           <div className="grid grid-cols-7 gap-2 mb-6">
-            {['D', 'L', 'M', 'M', 'J', 'V', 'S'].map(day => (
-              <div key={day} className="text-center text-sm font-medium text-gray-400 py-2">
-                {day}
-              </div>
+            {['D', 'L', 'M', 'M', 'J', 'V', 'S'].map((day, i) => (
+              <div key={i} className="text-center text-sm font-medium text-gray-400 py-2">{day}</div>
             ))}
             {calendarDates.map((date, index) => {
               const isToday = date.toDateString() === today.toDateString();
-              const isPast = date < today;
+              const isPast = date < today && !isToday;
               const isSelected = selectedDate?.toDateString() === date.toDateString();
-
               return (
                 <button
                   key={index}
                   onClick={() => !isPast && setSelectedDate(date)}
                   disabled={isPast}
                   className={`py-3 text-sm rounded-lg transition-all ${
-                    isPast
-                      ? 'text-gray-600 cursor-not-allowed'
-                      : isSelected
-                      ? 'bg-gold text-black font-bold'
-                      : isToday
-                      ? 'bg-gray-700 text-gold border border-gold'
-                      : 'bg-gray-800 text-white hover:bg-gray-700'
+                    isPast ? 'text-gray-600 cursor-not-allowed' :
+                    isSelected ? 'bg-gold text-black font-bold' :
+                    isToday ? 'bg-gray-700 text-gold border border-gold' :
+                    'bg-gray-800 text-white hover:bg-gray-700'
                   }`}
                 >
                   {date.getDate()}
@@ -388,28 +412,24 @@ const ReservarPage = () => {
           </div>
         </div>
 
-        {/* Horarios */}
         {selectedDate && (
           <div className="max-w-md mx-auto">
             <h3 className="text-lg font-semibold text-white mb-4 text-center">
-              Horarios disponibles - {selectedDate.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric' })}
+              Horarios — {selectedDate.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric' })}
             </h3>
             <div className="grid grid-cols-3 gap-2">
               {HORARIOS.map((hora) => {
                 const isOccupied = occupiedSlots.includes(hora);
                 const isSelected = selectedTime === hora;
-
                 return (
                   <button
                     key={hora}
                     onClick={() => !isOccupied && setSelectedTime(hora)}
                     disabled={isOccupied}
                     className={`py-2 px-3 text-sm rounded transition-all ${
-                      isOccupied
-                        ? 'bg-red-900/30 text-red-400 cursor-not-allowed'
-                        : isSelected
-                        ? 'bg-gold text-black font-bold'
-                        : 'bg-gray-800 text-white hover:bg-gray-700'
+                      isOccupied ? 'bg-red-900/30 text-red-400 cursor-not-allowed' :
+                      isSelected ? 'bg-gold text-black font-bold' :
+                      'bg-gray-800 text-white hover:bg-gray-700'
                     }`}
                   >
                     {hora}
@@ -417,11 +437,13 @@ const ReservarPage = () => {
                 );
               })}
             </div>
-            <div className="mt-4 text-center">
-              <div className="flex items-center justify-center gap-2 text-sm">
+            <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+              <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-gray-800 rounded"></div>
                 <span className="text-gray-400">Disponible</span>
-                <div className="w-3 h-3 bg-red-900/30 rounded ml-4"></div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-red-900/30 rounded"></div>
                 <span className="text-red-400">Ocupado</span>
               </div>
             </div>
@@ -431,22 +453,18 @@ const ReservarPage = () => {
     );
   };
 
-  // PASO 4: Confirmar
+  // ── PASO 4: Confirmar ─────────────────────────────────────────────────────
   const renderStep4 = () => {
     const priceInfo = calculatePrice(selectedService);
-    const profesional = profesionales.find(p => p.id === selectedProfesional?.id);
+    const profesional = profesionales.find((p) => p.id === selectedProfesional?.id);
 
     if (!profesional) {
-      return (
-        <div className="text-center">
-          <p className="text-red-400">Error: Profesional no encontrado</p>
-        </div>
-      );
+      return <div className="text-center"><p className="text-red-400">Error: Profesional no encontrado</p></div>;
     }
 
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gold text-center mb-6">Confirma tu turno</h2>
+        <h2 className="text-2xl font-bold text-gold text-center mb-6">Confirmá tu turno</h2>
 
         <div className="max-w-md mx-auto bg-gray-800 border border-gold/30 rounded-lg p-6">
           <div className="space-y-4">
@@ -454,42 +472,30 @@ const ReservarPage = () => {
               <span className="text-gray-400">Servicio:</span>
               <span className="text-white font-medium">{selectedService.nombre}</span>
             </div>
-
             <div className="flex justify-between items-center">
               <span className="text-gray-400">Profesional:</span>
               <span className="text-white font-medium">{profesional.nombre}</span>
             </div>
-
             <div className="flex justify-between items-center">
               <span className="text-gray-400">Fecha:</span>
               <span className="text-white font-medium">
-                {selectedDate.toLocaleDateString('es-ES', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+                {selectedDate.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
               </span>
             </div>
-
             <div className="flex justify-between items-center">
               <span className="text-gray-400">Hora:</span>
               <span className="text-white font-medium">{selectedTime}</span>
             </div>
-
             <div className="flex justify-between items-center">
               <span className="text-gray-400">Duración:</span>
               <span className="text-white font-medium">{selectedService.duracion}</span>
             </div>
-
             <div className="border-t border-gray-600 pt-4">
               <div className="flex justify-between items-center">
                 <span className="text-lg font-semibold text-gold">Total:</span>
                 <div className="text-right">
                   {priceInfo.discount && (
-                    <div className="text-sm text-gray-500 line-through">
-                      {formatPrice(priceInfo.discount)}
-                    </div>
+                    <div className="text-sm text-gray-500 line-through">{formatPrice(priceInfo.discount)}</div>
                   )}
                   <div className={`text-xl font-bold ${priceInfo.discount ? 'text-green-400' : 'text-gold'}`}>
                     {formatPrice(priceInfo.price)}
@@ -497,7 +503,7 @@ const ReservarPage = () => {
                 </div>
               </div>
               {priceInfo.message && (
-                <div className="mt-2 text-sm text-green-400">
+                <div className="mt-2 text-sm text-green-400 bg-green-900/20 rounded p-2 text-center">
                   {priceInfo.message}
                 </div>
               )}
@@ -528,7 +534,6 @@ const ReservarPage = () => {
     );
   };
 
-  // Renderizar paso actual
   const renderCurrentStep = () => {
     switch (currentStep) {
       case 1: return renderStep1();
@@ -539,109 +544,69 @@ const ReservarPage = () => {
     }
   };
 
-  // Navegación entre pasos
   const nextStep = () => {
-    if (currentStep === 1 && !selectedService) {
-      toast.error('Selecciona un servicio');
-      return;
-    }
-    if (currentStep === 2 && !selectedProfesional) {
-      toast.error('Selecciona un profesional');
-      return;
-    }
-    if (currentStep === 3 && (!selectedDate || !selectedTime)) {
-      toast.error('Selecciona fecha y hora');
-      return;
-    }
-    setCurrentStep(prev => Math.min(prev + 1, 4));
+    if (currentStep === 1 && !selectedService) { toast.error('Seleccioná un servicio'); return; }
+    if (currentStep === 2 && !selectedProfesional) { toast.error('Seleccioná un profesional'); return; }
+    if (currentStep === 3 && (!selectedDate || !selectedTime)) { toast.error('Seleccioná fecha y hora'); return; }
+    setCurrentStep((prev) => Math.min(prev + 1, 4));
   };
 
-  const prevStep = () => {
-    setCurrentStep(prev => Math.max(prev - 1, 1));
-  };
+  const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
-  try {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
-        {loading ? (
-          <div className="min-h-screen bg-black flex items-center justify-center">
-            <div className="text-center">
-              <AiOutlineLoading3Quarters className="text-4xl text-gold animate-spin mx-auto mb-4" />
-              <p className="text-gray-400">Cargando reservas...</p>
-            </div>
-          </div>
-        ) : (
-          <>
-            {/* Header */}
-            <nav className="bg-gray-900 border-b border-gold/30">
-              <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
-                <div className="flex items-center gap-4">
-                  <div className="text-sm text-gray-400">
-                    {user?.phoneNumber}
-                  </div>
-                  <button
-                    onClick={logout}
-                    className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition"
-                  >
-                    Cerrar sesión
-                  </button>
-                </div>
-              </div>
-            </nav>
-
-            {/* Contenido principal */}
-            <div className="max-w-4xl mx-auto px-4 py-8">
-              {renderProgressBar()}
-
-              <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
-                {renderCurrentStep()}
-              </div>
-
-              {/* Navegación */}
-              {currentStep < 4 && (
-                <div className="flex justify-between mt-8">
-                  <button
-                    onClick={prevStep}
-                    disabled={currentStep === 1}
-                    className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
-                  >
-                    <FiChevronLeft className="w-5 h-5" />
-                    Anterior
-                  </button>
-
-                  <button
-                    onClick={nextStep}
-                    className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
-                  >
-                    Siguiente
-                    <FiChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-              )}
-            </div>
-          </>
-        )}
-      </div>
-    );
-  } catch (error) {
-    console.error('Error en ReservarPage:', error);
+  if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center text-white">
-          <h2 className="text-2xl font-bold text-red-400 mb-4">Error en la página</h2>
-          <p className="text-gray-400 mb-4">Ha ocurrido un error inesperado.</p>
-          <p className="text-sm text-gray-500">{error.message}</p>
-          <button
-            onClick={() => window.location.reload()}
-            className="mt-4 px-4 py-2 bg-gold text-black rounded hover:bg-gold/90"
-          >
-            Recargar página
-          </button>
+        <div className="text-center">
+          <AiOutlineLoading3Quarters className="text-4xl text-gold animate-spin mx-auto mb-4" />
+          <p className="text-gray-400">Cargando...</p>
         </div>
       </div>
     );
   }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
+      <nav className="bg-gray-900 border-b border-gold/30">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
+          <div className="flex items-center gap-4">
+            <div className="text-sm text-gray-400">{user?.phoneNumber}</div>
+            <button onClick={logout} className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition">
+              Cerrar sesión
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {renderProgressBar()}
+
+        <div className="bg-gray-900 border border-gold/30 rounded-lg p-8">
+          {renderCurrentStep()}
+        </div>
+
+        {currentStep < 4 && (
+          <div className="flex justify-between mt-8">
+            <button
+              onClick={prevStep}
+              disabled={currentStep === 1}
+              className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:bg-gray-600 disabled:cursor-not-allowed transition flex items-center gap-2"
+            >
+              <FiChevronLeft className="w-5 h-5" />
+              Anterior
+            </button>
+            <button
+              onClick={nextStep}
+              className="px-6 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold/90 transition flex items-center gap-2"
+            >
+              Siguiente
+              <FiChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ReservarPage;
