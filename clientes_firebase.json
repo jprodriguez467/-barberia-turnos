@@ -1,0 +1,4212 @@
+[
+  {
+    "nombre": "Leandro",
+    "apellido": "",
+    "nombreCompleto": "Leandro",
+    "telefono": "+5493405431970",
+    "email": "",
+    "creadoEnAgendaPro": "06/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Edgardo",
+    "apellido": "",
+    "nombreCompleto": "Edgardo",
+    "telefono": "",
+    "email": "",
+    "creadoEnAgendaPro": "30/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marcos",
+    "apellido": "A",
+    "nombreCompleto": "Marcos A",
+    "telefono": "+543424382364",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Akiles",
+    "apellido": "Abuela cristina",
+    "nombreCompleto": "Akiles Abuela cristina",
+    "telefono": "+543426140724",
+    "email": "",
+    "creadoEnAgendaPro": "29/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lautaro",
+    "apellido": "Acevedo",
+    "nombreCompleto": "Lautaro Acevedo",
+    "telefono": "+543424458389",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "cesar",
+    "apellido": "agendapro",
+    "nombreCompleto": "cesar agendapro",
+    "telefono": "+54345555555",
+    "email": "gendaas@gmail.com",
+    "creadoEnAgendaPro": "20/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "juan",
+    "apellido": "aguiar",
+    "nombreCompleto": "juan aguiar",
+    "telefono": "+543425368727",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Aguilar",
+    "nombreCompleto": "Facundo Aguilar",
+    "telefono": "+543482635283",
+    "email": "",
+    "creadoEnAgendaPro": "30/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquin",
+    "apellido": "Alarcon",
+    "nombreCompleto": "Joaquin Alarcon",
+    "telefono": "+543424223841",
+    "email": "",
+    "creadoEnAgendaPro": "10/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Albarracín",
+    "nombreCompleto": "Facundo Albarracín",
+    "telefono": "+543424096055",
+    "email": "",
+    "creadoEnAgendaPro": "24/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Albrecht",
+    "nombreCompleto": "Carlos Albrecht",
+    "telefono": "+543425253422",
+    "email": "",
+    "creadoEnAgendaPro": "19/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Eric",
+    "apellido": "Alcaraz",
+    "nombreCompleto": "Eric Alcaraz",
+    "telefono": "+541126949770",
+    "email": "",
+    "creadoEnAgendaPro": "20/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "Aletti",
+    "nombreCompleto": "Nicolás Aletti",
+    "telefono": "+543424302573",
+    "email": "",
+    "creadoEnAgendaPro": "25/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Tomas",
+    "apellido": "Alloatti",
+    "nombreCompleto": "Tomas Alloatti",
+    "telefono": "+543425013267",
+    "email": "",
+    "creadoEnAgendaPro": "07/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Dante",
+    "apellido": "Alloatti",
+    "nombreCompleto": "Dante Alloatti",
+    "telefono": "+543425013267",
+    "email": "",
+    "creadoEnAgendaPro": "26/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan pablo",
+    "apellido": "Almeida",
+    "nombreCompleto": "Juan pablo Almeida",
+    "telefono": "+543425414833",
+    "email": "",
+    "creadoEnAgendaPro": "13/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Alvarez",
+    "nombreCompleto": "Carlos Alvarez",
+    "telefono": "+543424221716",
+    "email": "",
+    "creadoEnAgendaPro": "22/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Saul",
+    "apellido": "Amarilla",
+    "nombreCompleto": "Saul Amarilla",
+    "telefono": "+541123009633",
+    "email": "",
+    "creadoEnAgendaPro": "27/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fabricio",
+    "apellido": "Andreotti",
+    "nombreCompleto": "Fabricio Andreotti",
+    "telefono": "+543425999914",
+    "email": "fabricioandreotti4014@gmail.com",
+    "creadoEnAgendaPro": "21/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mateo",
+    "apellido": "Andreotti",
+    "nombreCompleto": "Mateo Andreotti",
+    "telefono": "+543424307747",
+    "email": "",
+    "creadoEnAgendaPro": "30/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquín",
+    "apellido": "Andreychuk",
+    "nombreCompleto": "Joaquín Andreychuk",
+    "telefono": "+543408673874",
+    "email": "andreychukjoa123@gmail.com",
+    "creadoEnAgendaPro": "16/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquin",
+    "apellido": "Andreychuk",
+    "nombreCompleto": "Joaquin Andreychuk",
+    "telefono": "+543408673874",
+    "email": "",
+    "creadoEnAgendaPro": "21/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marcos",
+    "apellido": "Anichini",
+    "nombreCompleto": "Marcos Anichini",
+    "telefono": "+543424382364",
+    "email": "",
+    "creadoEnAgendaPro": "13/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Eduardo",
+    "apellido": "Antoine",
+    "nombreCompleto": "Eduardo Antoine",
+    "telefono": "+542995852298",
+    "email": "",
+    "creadoEnAgendaPro": "12/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gonzalo",
+    "apellido": "Aranda",
+    "nombreCompleto": "Gonzalo Aranda",
+    "telefono": "+543425459653",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ignacio",
+    "apellido": "Arcuri",
+    "nombreCompleto": "Ignacio Arcuri",
+    "telefono": "+543426132542",
+    "email": "ignacioarcuri@gmail.com",
+    "creadoEnAgendaPro": "10/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Antonio",
+    "apellido": "Asis",
+    "nombreCompleto": "Antonio Asis",
+    "telefono": "+543516599123",
+    "email": "",
+    "creadoEnAgendaPro": "03/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Astudillo",
+    "nombreCompleto": "Carlos Astudillo",
+    "telefono": "+543426304187",
+    "email": "",
+    "creadoEnAgendaPro": "18/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Dante",
+    "apellido": "Ayala",
+    "nombreCompleto": "Dante Ayala",
+    "telefono": "+543454930681",
+    "email": "",
+    "creadoEnAgendaPro": "02/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Aylagas",
+    "nombreCompleto": "Santiago Aylagas",
+    "telefono": "+543424685469",
+    "email": "",
+    "creadoEnAgendaPro": "13/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Azzaro",
+    "nombreCompleto": "Francisco Azzaro",
+    "telefono": "+543424423450",
+    "email": "",
+    "creadoEnAgendaPro": "27/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "fede",
+    "apellido": "baldoni",
+    "nombreCompleto": "fede baldoni",
+    "telefono": "+543425084547",
+    "email": "",
+    "creadoEnAgendaPro": "25/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Federico Daniel",
+    "apellido": "Baldoni",
+    "nombreCompleto": "Federico Daniel Baldoni",
+    "telefono": "+543425084547",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Cesar",
+    "apellido": "Barreto",
+    "nombreCompleto": "Cesar Barreto",
+    "telefono": "+543424235951",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Norberto",
+    "apellido": "Barretto",
+    "nombreCompleto": "Norberto Barretto",
+    "telefono": "+543415096473",
+    "email": "",
+    "creadoEnAgendaPro": "03/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Norberto",
+    "apellido": "Barretto",
+    "nombreCompleto": "Norberto Barretto",
+    "telefono": "+545341096473",
+    "email": "",
+    "creadoEnAgendaPro": "07/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alex",
+    "apellido": "Bassus",
+    "nombreCompleto": "Alex Bassus",
+    "telefono": "+541164913160",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "gabriel",
+    "apellido": "Battistella",
+    "nombreCompleto": "gabriel Battistella",
+    "telefono": "+543424770234",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "FACUNDO",
+    "apellido": "BEBE",
+    "nombreCompleto": "FACUNDO BEBE",
+    "telefono": "+543426124901",
+    "email": "",
+    "creadoEnAgendaPro": "31/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Edgard",
+    "apellido": "Bellier",
+    "nombreCompleto": "Edgard Bellier",
+    "telefono": "+543425683672",
+    "email": "edgardbellier5@gmail.com",
+    "creadoEnAgendaPro": "10/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bruno",
+    "apellido": "Benitez",
+    "nombreCompleto": "Bruno Benitez",
+    "telefono": "+543454094885",
+    "email": "",
+    "creadoEnAgendaPro": "23/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Daniel",
+    "apellido": "Berberich",
+    "nombreCompleto": "Daniel Berberich",
+    "telefono": "+543404635146",
+    "email": "",
+    "creadoEnAgendaPro": "24/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Daniel",
+    "apellido": "Biancotti",
+    "nombreCompleto": "Daniel Biancotti",
+    "telefono": "+543425226447",
+    "email": "",
+    "creadoEnAgendaPro": "02/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Bojorque",
+    "nombreCompleto": "Lucas Bojorque",
+    "telefono": "+543425544523",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sergio",
+    "apellido": "Bonardo",
+    "nombreCompleto": "Sergio Bonardo",
+    "telefono": "+54349845344",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jonathan",
+    "apellido": "Bonsi",
+    "nombreCompleto": "Jonathan Bonsi",
+    "telefono": "+543434467740",
+    "email": "bonsi2552@gmail.com",
+    "creadoEnAgendaPro": "20/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jonathan",
+    "apellido": "Bonsi",
+    "nombreCompleto": "Jonathan Bonsi",
+    "telefono": "+549343446774",
+    "email": "",
+    "creadoEnAgendaPro": "20/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jonathan-Emir",
+    "apellido": "Bonsi-hachin",
+    "nombreCompleto": "Jonathan-Emir Bonsi-hachin",
+    "telefono": "+543434467740",
+    "email": "",
+    "creadoEnAgendaPro": "15/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alexis",
+    "apellido": "Boretto",
+    "nombreCompleto": "Alexis Boretto",
+    "telefono": "+543492576502",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Octavio",
+    "apellido": "Bravo",
+    "nombreCompleto": "Octavio Bravo",
+    "telefono": "+549342512565",
+    "email": "",
+    "creadoEnAgendaPro": "23/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Octavio",
+    "apellido": "Bravo",
+    "nombreCompleto": "Octavio Bravo",
+    "telefono": "+543425125657",
+    "email": "",
+    "creadoEnAgendaPro": "26/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Brian",
+    "apellido": "Bravo",
+    "nombreCompleto": "Brian Bravo",
+    "telefono": "+543424213815",
+    "email": "",
+    "creadoEnAgendaPro": "15/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Federico",
+    "apellido": "Breyaui",
+    "nombreCompleto": "Federico Breyaui",
+    "telefono": "+543426400199",
+    "email": "federicobreyaui@gmail.com",
+    "creadoEnAgendaPro": "08/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marco",
+    "apellido": "Brigati",
+    "nombreCompleto": "Marco Brigati",
+    "telefono": "+54342553023",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marco",
+    "apellido": "Brigati",
+    "nombreCompleto": "Marco Brigati",
+    "telefono": "+543425530233",
+    "email": "",
+    "creadoEnAgendaPro": "29/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Osvaldo",
+    "apellido": "Bruno",
+    "nombreCompleto": "Osvaldo Bruno",
+    "telefono": "+54342411",
+    "email": "",
+    "creadoEnAgendaPro": "15/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Osvaldo",
+    "apellido": "Bruno",
+    "nombreCompleto": "Osvaldo Bruno",
+    "telefono": "+543424239911",
+    "email": "",
+    "creadoEnAgendaPro": "16/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentín",
+    "apellido": "Bugnon",
+    "nombreCompleto": "Valentín Bugnon",
+    "telefono": "+543424328402",
+    "email": "",
+    "creadoEnAgendaPro": "18/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Hugo",
+    "apellido": "buhajeruk",
+    "nombreCompleto": "Hugo buhajeruk",
+    "telefono": "+543426103077",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "bruno",
+    "apellido": "burgues",
+    "nombreCompleto": "bruno burgues",
+    "telefono": "+543426263362",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bruno",
+    "apellido": "Burgues",
+    "nombreCompleto": "Bruno Burgues",
+    "telefono": "+54346263362",
+    "email": "",
+    "creadoEnAgendaPro": "04/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Claudio Cabrera",
+    "telefono": "+543424083451",
+    "email": "",
+    "creadoEnAgendaPro": "01/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Claudio Cabrera",
+    "telefono": "+544073720",
+    "email": "",
+    "creadoEnAgendaPro": "05/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Claudio Cabrera",
+    "telefono": "+543424073720",
+    "email": "",
+    "creadoEnAgendaPro": "23/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Carlos Cabrera",
+    "telefono": "+544083551",
+    "email": "",
+    "creadoEnAgendaPro": "01/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Agustin Cabrera",
+    "telefono": "+543425683094",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Claudio Cabrera",
+    "telefono": "+54342374720",
+    "email": "",
+    "creadoEnAgendaPro": "03/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Claudio",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Claudio Cabrera",
+    "telefono": "+5424083451",
+    "email": "",
+    "creadoEnAgendaPro": "30/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gerónimo",
+    "apellido": "Cabrera",
+    "nombreCompleto": "Gerónimo Cabrera",
+    "telefono": "+543498407926",
+    "email": "",
+    "creadoEnAgendaPro": "26/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Leila",
+    "apellido": "Cáceres",
+    "nombreCompleto": "Leila Cáceres",
+    "telefono": "+543425403313",
+    "email": "",
+    "creadoEnAgendaPro": "01/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "alcides",
+    "apellido": "cafaro",
+    "nombreCompleto": "alcides cafaro",
+    "telefono": "+543424060467",
+    "email": "",
+    "creadoEnAgendaPro": "30/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ildefonso",
+    "apellido": "Calleja",
+    "nombreCompleto": "Ildefonso Calleja",
+    "telefono": "+5493424669399",
+    "email": "",
+    "creadoEnAgendaPro": "16/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "CAMAS PILATES",
+    "nombreCompleto": "Juan CAMAS PILATES",
+    "telefono": "+543424781389",
+    "email": "",
+    "creadoEnAgendaPro": "15/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Cecilia",
+    "apellido": "Caminiti",
+    "nombreCompleto": "Cecilia Caminiti",
+    "telefono": "+543416449553",
+    "email": "",
+    "creadoEnAgendaPro": "18/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "juan",
+    "apellido": "camino",
+    "nombreCompleto": "juan camino",
+    "telefono": "+543455210005",
+    "email": "",
+    "creadoEnAgendaPro": "23/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rafael",
+    "apellido": "Camussi",
+    "nombreCompleto": "Rafael Camussi",
+    "telefono": "+54934215612320",
+    "email": "",
+    "creadoEnAgendaPro": "03/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rafael",
+    "apellido": "Camussi",
+    "nombreCompleto": "Rafael Camussi",
+    "telefono": "+543426123208",
+    "email": "",
+    "creadoEnAgendaPro": "15/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bruno",
+    "apellido": "Canavesio",
+    "nombreCompleto": "Bruno Canavesio",
+    "telefono": "+543424628289",
+    "email": "",
+    "creadoEnAgendaPro": "21/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "fabrizio",
+    "apellido": "Carrara",
+    "nombreCompleto": "fabrizio Carrara",
+    "telefono": "+549342523791",
+    "email": "",
+    "creadoEnAgendaPro": "06/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "fabrizio",
+    "apellido": "Carrara",
+    "nombreCompleto": "fabrizio Carrara",
+    "telefono": "+543425237918",
+    "email": "",
+    "creadoEnAgendaPro": "17/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Constantino",
+    "apellido": "Castagno Suarez",
+    "nombreCompleto": "Constantino Castagno Suarez",
+    "telefono": "+543541275057",
+    "email": "constacastagnosuarez@gmail.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Celeri",
+    "nombreCompleto": "Francisco Celeri",
+    "telefono": "+543426148374",
+    "email": "",
+    "creadoEnAgendaPro": "21/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mariana",
+    "apellido": "Cerf",
+    "nombreCompleto": "Mariana Cerf",
+    "telefono": "+543426495705",
+    "email": "mmcerf@gmail.com",
+    "creadoEnAgendaPro": "18/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Emmanuel",
+    "apellido": "Chiodini",
+    "nombreCompleto": "Emmanuel Chiodini",
+    "telefono": "+543425225785",
+    "email": "",
+    "creadoEnAgendaPro": "26/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mauricio",
+    "apellido": "Cirmena Kees",
+    "nombreCompleto": "Mauricio Cirmena Kees",
+    "telefono": "+543424792410",
+    "email": "",
+    "creadoEnAgendaPro": "25/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maximiliano",
+    "apellido": "Ciro",
+    "nombreCompleto": "Maximiliano Ciro",
+    "telefono": "+543425974095",
+    "email": "",
+    "creadoEnAgendaPro": "20/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "nuevo",
+    "apellido": "cliente",
+    "nombreCompleto": "nuevo cliente",
+    "telefono": "+543425952719",
+    "email": "",
+    "creadoEnAgendaPro": "30/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Danilo",
+    "apellido": "Cliente",
+    "nombreCompleto": "Danilo Cliente",
+    "telefono": "+543415486340",
+    "email": "",
+    "creadoEnAgendaPro": "07/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Elias",
+    "apellido": "Colono",
+    "nombreCompleto": "Elias Colono",
+    "telefono": "+543492684179",
+    "email": "",
+    "creadoEnAgendaPro": "17/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Elias",
+    "apellido": "Colono",
+    "nombreCompleto": "Elias Colono",
+    "telefono": "+54342684179",
+    "email": "",
+    "creadoEnAgendaPro": "03/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Elias",
+    "apellido": "Colono",
+    "nombreCompleto": "Elias Colono",
+    "telefono": "+5434926841",
+    "email": "",
+    "creadoEnAgendaPro": "24/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Elias",
+    "apellido": "Colono",
+    "nombreCompleto": "Elias Colono",
+    "telefono": "+5493492684179",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fernando",
+    "apellido": "Conil",
+    "nombreCompleto": "Fernando Conil",
+    "telefono": "+543425031921",
+    "email": "",
+    "creadoEnAgendaPro": "07/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Conti",
+    "nombreCompleto": "Facundo Conti",
+    "telefono": "+54349231767",
+    "email": "",
+    "creadoEnAgendaPro": "12/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Conti",
+    "nombreCompleto": "Facundo Conti",
+    "telefono": "+543482317657",
+    "email": "",
+    "creadoEnAgendaPro": "25/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "COnti",
+    "nombreCompleto": "Facundo COnti",
+    "telefono": "+543492317657",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquin",
+    "apellido": "Correa Garnier",
+    "nombreCompleto": "Joaquin Correa Garnier",
+    "telefono": "+543433000855",
+    "email": "",
+    "creadoEnAgendaPro": "21/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Costa",
+    "nombreCompleto": "Agustin Costa",
+    "telefono": "+54919295358762",
+    "email": "",
+    "creadoEnAgendaPro": "13/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "German",
+    "apellido": "Cuzzolino",
+    "nombreCompleto": "German Cuzzolino",
+    "telefono": "+543426126097",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mauricio",
+    "apellido": "Daletzky",
+    "nombreCompleto": "Mauricio Daletzky",
+    "telefono": "+543424213015",
+    "email": "",
+    "creadoEnAgendaPro": "11/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Dandolo",
+    "nombreCompleto": "Facundo Dandolo",
+    "telefono": "+543426124901",
+    "email": "",
+    "creadoEnAgendaPro": "14/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Benjamin",
+    "apellido": "Dandolo",
+    "nombreCompleto": "Benjamin Dandolo",
+    "telefono": "+543426124901",
+    "email": "",
+    "creadoEnAgendaPro": "10/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damian Davoli",
+    "apellido": "Davoli",
+    "nombreCompleto": "Damian Davoli Davoli",
+    "telefono": "+543425491871",
+    "email": "",
+    "creadoEnAgendaPro": "06/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damián",
+    "apellido": "Davoli",
+    "nombreCompleto": "Damián Davoli",
+    "telefono": "+549342422848",
+    "email": "",
+    "creadoEnAgendaPro": "29/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Tomas",
+    "apellido": "Dean",
+    "nombreCompleto": "Tomas Dean",
+    "telefono": "+543482613315",
+    "email": "tomas.dean2002@gmail.com",
+    "creadoEnAgendaPro": "19/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Giuliano",
+    "apellido": "De Angeli",
+    "nombreCompleto": "Giuliano De Angeli",
+    "telefono": "+543425299176",
+    "email": "",
+    "creadoEnAgendaPro": "01/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejo",
+    "apellido": "Degiorgis",
+    "nombreCompleto": "Alejo Degiorgis",
+    "telefono": "+543424217233",
+    "email": "",
+    "creadoEnAgendaPro": "19/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "edgardo",
+    "apellido": "delettieres",
+    "nombreCompleto": "edgardo delettieres",
+    "telefono": "",
+    "email": "",
+    "creadoEnAgendaPro": "30/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Edgardo",
+    "apellido": "Delettieres",
+    "nombreCompleto": "Edgardo Delettieres",
+    "telefono": "",
+    "email": "",
+    "creadoEnAgendaPro": "30/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Faustino",
+    "apellido": "Devoto",
+    "nombreCompleto": "Faustino Devoto",
+    "telefono": "+543454023344",
+    "email": "fdev32x@gmail.com",
+    "creadoEnAgendaPro": "13/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "tiziano",
+    "apellido": "diana",
+    "nombreCompleto": "tiziano diana",
+    "telefono": "+543424408320",
+    "email": "",
+    "creadoEnAgendaPro": "19/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Hernan",
+    "apellido": "Diaz",
+    "nombreCompleto": "Hernan Diaz",
+    "telefono": "+543424454638",
+    "email": "",
+    "creadoEnAgendaPro": "31/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Andrés",
+    "apellido": "Díaz",
+    "nombreCompleto": "Juan Andrés Díaz",
+    "telefono": "+543426133933",
+    "email": "",
+    "creadoEnAgendaPro": "09/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Genaro",
+    "apellido": "Díaz",
+    "nombreCompleto": "Genaro Díaz",
+    "telefono": "+543405482614",
+    "email": "",
+    "creadoEnAgendaPro": "08/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Luciano",
+    "apellido": "Di Pasquale",
+    "nombreCompleto": "Luciano Di Pasquale",
+    "telefono": "+543424073713",
+    "email": "",
+    "creadoEnAgendaPro": "24/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fermin",
+    "apellido": "Dopazo",
+    "nombreCompleto": "Fermin Dopazo",
+    "telefono": "+543454412909",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Dusso",
+    "nombreCompleto": "Santiago Dusso",
+    "telefono": "+543426147801",
+    "email": "mariaesmeralda.videla@gmail.com",
+    "creadoEnAgendaPro": "13/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Tadeo",
+    "apellido": "Dusso",
+    "nombreCompleto": "Tadeo Dusso",
+    "telefono": "+543426147801",
+    "email": "",
+    "creadoEnAgendaPro": "16/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin Ariel",
+    "apellido": "Echarren",
+    "nombreCompleto": "Agustin Ariel Echarren",
+    "telefono": "+549342630493",
+    "email": "",
+    "creadoEnAgendaPro": "19/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ángel",
+    "apellido": "Eleuteri",
+    "nombreCompleto": "Ángel Eleuteri",
+    "telefono": "+543425117919",
+    "email": "",
+    "creadoEnAgendaPro": "20/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mauro",
+    "apellido": "epelbauE",
+    "nombreCompleto": "Mauro epelbauE",
+    "telefono": "+543424434307",
+    "email": "",
+    "creadoEnAgendaPro": "13/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mauro",
+    "apellido": "Epelbaum",
+    "nombreCompleto": "Mauro Epelbaum",
+    "telefono": "+5424434307",
+    "email": "",
+    "creadoEnAgendaPro": "24/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Eterovich",
+    "nombreCompleto": "Nicolas Eterovich",
+    "telefono": "+543425087977",
+    "email": "",
+    "creadoEnAgendaPro": "31/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Fabro",
+    "nombreCompleto": "Francisco Fabro",
+    "telefono": "+543425047355",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ulises",
+    "apellido": "Fantini",
+    "nombreCompleto": "Ulises Fantini",
+    "telefono": "+54349155473",
+    "email": "",
+    "creadoEnAgendaPro": "18/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ulises",
+    "apellido": "Fantini",
+    "nombreCompleto": "Ulises Fantini",
+    "telefono": "+543491555473",
+    "email": "",
+    "creadoEnAgendaPro": "25/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gianni",
+    "apellido": "Farioli",
+    "nombreCompleto": "Gianni Farioli",
+    "telefono": "+543425461743",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Faustino",
+    "apellido": "Favaro",
+    "nombreCompleto": "Faustino Favaro",
+    "telefono": "+543424084582",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Favaro",
+    "nombreCompleto": "Juan Favaro",
+    "telefono": "+543424084582",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Emilio",
+    "apellido": "Favaro",
+    "nombreCompleto": "Juan Emilio Favaro",
+    "telefono": "+543426133128",
+    "email": "",
+    "creadoEnAgendaPro": "18/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Favaro",
+    "nombreCompleto": "Francisco Favaro",
+    "telefono": "+543424084582",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Fenoglio",
+    "nombreCompleto": "Francisco Fenoglio",
+    "telefono": "+543424866129",
+    "email": "",
+    "creadoEnAgendaPro": "24/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Esteban",
+    "apellido": "Fenoglio",
+    "nombreCompleto": "Esteban Fenoglio",
+    "telefono": "+54342349134",
+    "email": "",
+    "creadoEnAgendaPro": "08/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Esteban",
+    "apellido": "Fenoglio",
+    "nombreCompleto": "Esteban Fenoglio",
+    "telefono": "+543424349134",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Fernández",
+    "nombreCompleto": "Carlos Fernández",
+    "telefono": "+543424797262",
+    "email": "",
+    "creadoEnAgendaPro": "20/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Fernandez Borda",
+    "nombreCompleto": "Santiago Fernandez Borda",
+    "telefono": "+543426319766",
+    "email": "santiagofernandezborda@gmail.com",
+    "creadoEnAgendaPro": "18/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sergio",
+    "apellido": "Fernández Borda",
+    "nombreCompleto": "Sergio Fernández Borda",
+    "telefono": "+54342406557",
+    "email": "",
+    "creadoEnAgendaPro": "22/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Fernández Borda",
+    "nombreCompleto": "Santiago Fernández Borda",
+    "telefono": "+546319766",
+    "email": "",
+    "creadoEnAgendaPro": "14/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sergio",
+    "apellido": "Fernández Borda",
+    "nombreCompleto": "Sergio Fernández Borda",
+    "telefono": "+543424065556",
+    "email": "",
+    "creadoEnAgendaPro": "19/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquín",
+    "apellido": "Fernández Borda",
+    "nombreCompleto": "Joaquín Fernández Borda",
+    "telefono": "+543426107185",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sergio",
+    "apellido": "Fernández  Borda",
+    "nombreCompleto": "Sergio Fernández  Borda",
+    "telefono": "+543424065557",
+    "email": "",
+    "creadoEnAgendaPro": "15/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ignacio",
+    "apellido": "Ferrer",
+    "nombreCompleto": "Ignacio Ferrer",
+    "telefono": "+5493434621557",
+    "email": "ferrernacho97@gmail.com",
+    "creadoEnAgendaPro": "17/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Bautista",
+    "apellido": "Ferreyra",
+    "nombreCompleto": "Juan Bautista Ferreyra",
+    "telefono": "+543426153255",
+    "email": "",
+    "creadoEnAgendaPro": "17/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martín",
+    "apellido": "FERREYRA",
+    "nombreCompleto": "Martín FERREYRA",
+    "telefono": "+543426153255",
+    "email": "monitor.im.sistemas@gmail.com",
+    "creadoEnAgendaPro": "05/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "MARTIN",
+    "apellido": "FERREYRA",
+    "nombreCompleto": "MARTIN FERREYRA",
+    "telefono": "+543426153255",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rafael",
+    "apellido": "Flores",
+    "nombreCompleto": "Rafael Flores",
+    "telefono": "+543425952719",
+    "email": "",
+    "creadoEnAgendaPro": "06/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rafa",
+    "apellido": "Flores",
+    "nombreCompleto": "Rafa Flores",
+    "telefono": "+545952719",
+    "email": "",
+    "creadoEnAgendaPro": "14/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Pablo",
+    "apellido": "Fonseca",
+    "nombreCompleto": "Pablo Fonseca",
+    "telefono": "+543458413601",
+    "email": "",
+    "creadoEnAgendaPro": "04/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Federico",
+    "apellido": "Fontanini",
+    "nombreCompleto": "Federico Fontanini",
+    "telefono": "+543425116710",
+    "email": "",
+    "creadoEnAgendaPro": "06/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Fontanini",
+    "nombreCompleto": "Francisco Fontanini",
+    "telefono": "+543426121143",
+    "email": "fontaninifrancisco1@gmail.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gian",
+    "apellido": "Franco Turco",
+    "nombreCompleto": "Gian Franco Turco",
+    "telefono": "+541136359579",
+    "email": "",
+    "creadoEnAgendaPro": "22/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "verdulero",
+    "apellido": "frgyyghnjgjmgm",
+    "nombreCompleto": "verdulero frgyyghnjgjmgm",
+    "telefono": "+543425459653",
+    "email": "",
+    "creadoEnAgendaPro": "25/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Franco",
+    "apellido": "Friggeri",
+    "nombreCompleto": "Franco Friggeri",
+    "telefono": "+543426989899",
+    "email": "",
+    "creadoEnAgendaPro": "05/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Hugo Tecnico",
+    "apellido": "Futbol",
+    "nombreCompleto": "Hugo Tecnico Futbol",
+    "telefono": "+543426103077",
+    "email": "",
+    "creadoEnAgendaPro": "08/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lucía",
+    "apellido": "Gaitán",
+    "nombreCompleto": "Lucía Gaitán",
+    "telefono": "+543425239472",
+    "email": "gaitanlucia2011@gmail.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Galiano",
+    "nombreCompleto": "Nicolas Galiano",
+    "telefono": "+543426120461",
+    "email": "",
+    "creadoEnAgendaPro": "29/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marcelo",
+    "apellido": "Galizzi",
+    "nombreCompleto": "Marcelo Galizzi",
+    "telefono": "+543425526616",
+    "email": "",
+    "creadoEnAgendaPro": "25/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guillermo",
+    "apellido": "Galizzi",
+    "nombreCompleto": "Guillermo Galizzi",
+    "telefono": "+54342552",
+    "email": "",
+    "creadoEnAgendaPro": "17/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guillermo",
+    "apellido": "Galizzi",
+    "nombreCompleto": "Guillermo Galizzi",
+    "telefono": "+543425526616",
+    "email": "",
+    "creadoEnAgendaPro": "12/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ulises",
+    "apellido": "Gambero",
+    "nombreCompleto": "Ulises Gambero",
+    "telefono": "+543425320168",
+    "email": "",
+    "creadoEnAgendaPro": "24/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gabriel",
+    "apellido": "Garage",
+    "nombreCompleto": "Gabriel Garage",
+    "telefono": "+543425320200",
+    "email": "",
+    "creadoEnAgendaPro": "21/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Blas",
+    "apellido": "Garboso",
+    "nombreCompleto": "Blas Garboso",
+    "telefono": "+543426100402",
+    "email": "",
+    "creadoEnAgendaPro": "03/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustín",
+    "apellido": "Garboso",
+    "nombreCompleto": "Agustín Garboso",
+    "telefono": "+543462303875",
+    "email": "",
+    "creadoEnAgendaPro": "12/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Florencia",
+    "apellido": "Gatti",
+    "nombreCompleto": "Florencia Gatti",
+    "telefono": "+543496651224",
+    "email": "",
+    "creadoEnAgendaPro": "04/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Gautero",
+    "nombreCompleto": "Juan Gautero",
+    "telefono": "+543424781389",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Gaya",
+    "nombreCompleto": "Nicolas Gaya",
+    "telefono": "+543426303555",
+    "email": "",
+    "creadoEnAgendaPro": "29/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Martin",
+    "apellido": "Gervasoni",
+    "nombreCompleto": "Juan Martin Gervasoni",
+    "telefono": "+543425538707",
+    "email": "",
+    "creadoEnAgendaPro": "31/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlo",
+    "apellido": "gieco",
+    "nombreCompleto": "Carlo gieco",
+    "telefono": "+543492574769",
+    "email": "carlogieco36@gmail.com",
+    "creadoEnAgendaPro": "11/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Gimenez",
+    "nombreCompleto": "Alejandro Gimenez",
+    "telefono": "+543425157782",
+    "email": "",
+    "creadoEnAgendaPro": "28/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Gimenez",
+    "nombreCompleto": "Alejandro Gimenez",
+    "telefono": "+541171440073",
+    "email": "cortedepelo@gmail.com",
+    "creadoEnAgendaPro": "14/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Pablo",
+    "apellido": "Gimenez",
+    "nombreCompleto": "Pablo Gimenez",
+    "telefono": "+543424762635",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Benicio",
+    "apellido": "Giordano",
+    "nombreCompleto": "Benicio Giordano",
+    "telefono": "+543498419148",
+    "email": "",
+    "creadoEnAgendaPro": "29/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Felipe",
+    "apellido": "Giordano",
+    "nombreCompleto": "Felipe Giordano",
+    "telefono": "+543498440030",
+    "email": "",
+    "creadoEnAgendaPro": "06/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandor",
+    "apellido": "Gmz",
+    "nombreCompleto": "Alejandor Gmz",
+    "telefono": "+543425157782",
+    "email": "",
+    "creadoEnAgendaPro": "20/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Javier",
+    "apellido": "Goitia",
+    "nombreCompleto": "Javier Goitia",
+    "telefono": "+543425400067",
+    "email": "",
+    "creadoEnAgendaPro": "10/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "María",
+    "apellido": "Gomez",
+    "nombreCompleto": "María Gomez",
+    "telefono": "+549999999999",
+    "email": "clientedeejemplo@agendapro.com",
+    "creadoEnAgendaPro": "07/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "José Ignacio",
+    "apellido": "Gomez",
+    "nombreCompleto": "José Ignacio Gomez",
+    "telefono": "+543426101834",
+    "email": "",
+    "creadoEnAgendaPro": "21/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "José Ignacio",
+    "apellido": "Gómez",
+    "nombreCompleto": "José Ignacio Gómez",
+    "telefono": "+54156101834",
+    "email": "",
+    "creadoEnAgendaPro": "17/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Gonzalez",
+    "nombreCompleto": "Nicolas Gonzalez",
+    "telefono": "+543442501534",
+    "email": "",
+    "creadoEnAgendaPro": "10/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas Alberto",
+    "apellido": "Gonzalez",
+    "nombreCompleto": "Nicolas Alberto Gonzalez",
+    "telefono": "+543442501534",
+    "email": "nicoogonzalez@live.com.ar",
+    "creadoEnAgendaPro": "09/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nazareno",
+    "apellido": "Gorosito",
+    "nombreCompleto": "Nazareno Gorosito",
+    "telefono": "+543491698189",
+    "email": "",
+    "creadoEnAgendaPro": "23/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nazareno",
+    "apellido": "Gorosito",
+    "nombreCompleto": "Nazareno Gorosito",
+    "telefono": "+5491698189",
+    "email": "",
+    "creadoEnAgendaPro": "27/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Seba",
+    "apellido": "Gozal",
+    "nombreCompleto": "Seba Gozal",
+    "telefono": "+543425149576",
+    "email": "",
+    "creadoEnAgendaPro": "29/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Seba",
+    "apellido": "Gozal",
+    "nombreCompleto": "Seba Gozal",
+    "telefono": "+543424497268",
+    "email": "",
+    "creadoEnAgendaPro": "04/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Seba",
+    "apellido": "Gozal",
+    "nombreCompleto": "Seba Gozal",
+    "telefono": "+543425155497",
+    "email": "",
+    "creadoEnAgendaPro": "18/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Conrado",
+    "apellido": "Grimoldi",
+    "nombreCompleto": "Conrado Grimoldi",
+    "telefono": "+543426278562",
+    "email": "",
+    "creadoEnAgendaPro": "27/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Conrado",
+    "apellido": "Grimoldi",
+    "nombreCompleto": "Conrado Grimoldi",
+    "telefono": "+543424368978",
+    "email": "",
+    "creadoEnAgendaPro": "29/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Conrado",
+    "apellido": "Grimoldi",
+    "nombreCompleto": "Conrado Grimoldi",
+    "telefono": "+545493426278",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Galo",
+    "apellido": "Guastavino",
+    "nombreCompleto": "Galo Guastavino",
+    "telefono": "+543425245687",
+    "email": "",
+    "creadoEnAgendaPro": "08/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Genaro",
+    "apellido": "Guglielminotti",
+    "nombreCompleto": "Genaro Guglielminotti",
+    "telefono": "+543424232778",
+    "email": "",
+    "creadoEnAgendaPro": "05/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Esteban",
+    "apellido": "Guglielminotti",
+    "nombreCompleto": "Esteban Guglielminotti",
+    "telefono": "+543424232778",
+    "email": "",
+    "creadoEnAgendaPro": "02/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Guillen",
+    "nombreCompleto": "Andrés Guillen",
+    "telefono": "+549342532508",
+    "email": "",
+    "creadoEnAgendaPro": "06/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Guillen",
+    "nombreCompleto": "Andrés Guillen",
+    "telefono": "+543425835081",
+    "email": "",
+    "creadoEnAgendaPro": "07/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Andrés",
+    "apellido": "Guillen",
+    "nombreCompleto": "Andrés Guillen",
+    "telefono": "+543425325081",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Habichayn",
+    "nombreCompleto": "Juan Habichayn",
+    "telefono": "+543425947164",
+    "email": "",
+    "creadoEnAgendaPro": "05/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan cruz",
+    "apellido": "Habichayn",
+    "nombreCompleto": "Juan cruz Habichayn",
+    "telefono": "+543425510060",
+    "email": "",
+    "creadoEnAgendaPro": "30/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Habichayn",
+    "nombreCompleto": "Juan Habichayn",
+    "telefono": "+543425947161",
+    "email": "",
+    "creadoEnAgendaPro": "21/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Habichayn",
+    "nombreCompleto": "Juan Habichayn",
+    "telefono": "+54345947164",
+    "email": "",
+    "creadoEnAgendaPro": "12/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Emir",
+    "apellido": "Hachim",
+    "nombreCompleto": "Emir Hachim",
+    "telefono": "+543492419203",
+    "email": "",
+    "creadoEnAgendaPro": "01/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Hermano",
+    "nombreCompleto": "Juan Manuel Hermano",
+    "telefono": "+543425135835",
+    "email": "",
+    "creadoEnAgendaPro": "03/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "(Hijo Lucre)",
+    "nombreCompleto": "Valentino (Hijo Lucre)",
+    "telefono": "+543425012615",
+    "email": "",
+    "creadoEnAgendaPro": "08/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Hintermeister",
+    "nombreCompleto": "Alejandro Hintermeister",
+    "telefono": "+543424660125",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Hintermeister",
+    "nombreCompleto": "Alejandro Hintermeister",
+    "telefono": "+54154660125",
+    "email": "",
+    "creadoEnAgendaPro": "20/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Hintermeister",
+    "nombreCompleto": "Alejandro Hintermeister",
+    "telefono": "+54342660125",
+    "email": "",
+    "creadoEnAgendaPro": "16/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Pablo",
+    "apellido": "Huaco del carpio",
+    "nombreCompleto": "Juan Pablo Huaco del carpio",
+    "telefono": "+543493524211",
+    "email": "",
+    "creadoEnAgendaPro": "31/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damian",
+    "apellido": "Huber",
+    "nombreCompleto": "Damian Huber",
+    "telefono": "+54344726999",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damian",
+    "apellido": "Huber",
+    "nombreCompleto": "Damian Huber",
+    "telefono": "+543424726999",
+    "email": "",
+    "creadoEnAgendaPro": "13/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mariano",
+    "apellido": "Huy",
+    "nombreCompleto": "Mariano Huy",
+    "telefono": "+546260247",
+    "email": "",
+    "creadoEnAgendaPro": "06/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Ignacio",
+    "nombreCompleto": "Juan Ignacio",
+    "telefono": "+543425775852",
+    "email": "",
+    "creadoEnAgendaPro": "06/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Franco",
+    "apellido": "Insaurralde",
+    "nombreCompleto": "Franco Insaurralde",
+    "telefono": "+543482601291",
+    "email": "",
+    "creadoEnAgendaPro": "05/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Tiago",
+    "apellido": "Irasuegui",
+    "nombreCompleto": "Tiago Irasuegui",
+    "telefono": "+543483432118",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sebastian",
+    "apellido": "Isetta",
+    "nombreCompleto": "Sebastian Isetta",
+    "telefono": "+543426112675",
+    "email": "",
+    "creadoEnAgendaPro": "03/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lopez Muller",
+    "apellido": "Jeremias",
+    "nombreCompleto": "Lopez Muller Jeremias",
+    "telefono": "+543438442170",
+    "email": "",
+    "creadoEnAgendaPro": "25/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "elmejor",
+    "apellido": "joaquin",
+    "nombreCompleto": "elmejor joaquin",
+    "telefono": "+543424223841",
+    "email": "",
+    "creadoEnAgendaPro": "04/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Juarez",
+    "nombreCompleto": "Juan Juarez",
+    "telefono": "+543454103626",
+    "email": "",
+    "creadoEnAgendaPro": "18/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Kakisu",
+    "nombreCompleto": "Carlos Kakisu",
+    "telefono": "+543424211800",
+    "email": "",
+    "creadoEnAgendaPro": "22/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Klein",
+    "nombreCompleto": "Lucas Klein",
+    "telefono": "+543425351496",
+    "email": "",
+    "creadoEnAgendaPro": "02/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Klein",
+    "nombreCompleto": "Lucas Klein",
+    "telefono": "+543425351496",
+    "email": "",
+    "creadoEnAgendaPro": "11/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ramiro",
+    "apellido": "Krenz",
+    "nombreCompleto": "Ramiro Krenz",
+    "telefono": "+5493454940338",
+    "email": "",
+    "creadoEnAgendaPro": "31/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gastón",
+    "apellido": "Krohling",
+    "nombreCompleto": "Gastón Krohling",
+    "telefono": "+543496655350",
+    "email": "",
+    "creadoEnAgendaPro": "22/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Láquiz",
+    "nombreCompleto": "Ana Láquiz",
+    "telefono": "+543425492563",
+    "email": "",
+    "creadoEnAgendaPro": "02/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Pablo",
+    "apellido": "Larrosa",
+    "nombreCompleto": "Pablo Larrosa",
+    "telefono": "+543426986327",
+    "email": "",
+    "creadoEnAgendaPro": "24/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Javi",
+    "apellido": "Lass",
+    "nombreCompleto": "Javi Lass",
+    "telefono": "+543424782268",
+    "email": "",
+    "creadoEnAgendaPro": "12/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Javier",
+    "apellido": "Lassaga",
+    "nombreCompleto": "Javier Lassaga",
+    "telefono": "+543424782268",
+    "email": "",
+    "creadoEnAgendaPro": "23/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Javier",
+    "apellido": "Lassaga",
+    "nombreCompleto": "Javier Lassaga",
+    "telefono": "+54934478226",
+    "email": "",
+    "creadoEnAgendaPro": "13/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nahuel",
+    "apellido": "Lastra",
+    "nombreCompleto": "Nahuel Lastra",
+    "telefono": "+543408674404",
+    "email": "",
+    "creadoEnAgendaPro": "15/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ignacio",
+    "apellido": "Lell Ferrer",
+    "nombreCompleto": "Ignacio Lell Ferrer",
+    "telefono": "+543434621557",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guillermo Andres",
+    "apellido": "Lizarraga",
+    "nombreCompleto": "Guillermo Andres Lizarraga",
+    "telefono": "+543491442960",
+    "email": "",
+    "creadoEnAgendaPro": "17/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guillermo Andres",
+    "apellido": "Lizarraga",
+    "nombreCompleto": "Guillermo Andres Lizarraga",
+    "telefono": "+543491442930",
+    "email": "",
+    "creadoEnAgendaPro": "13/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "LITO",
+    "apellido": "LLAVES",
+    "nombreCompleto": "LITO LLAVES",
+    "telefono": "+543426131085",
+    "email": "",
+    "creadoEnAgendaPro": "17/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jeronimo",
+    "apellido": "lombardo",
+    "nombreCompleto": "Jeronimo lombardo",
+    "telefono": "+549342421132",
+    "email": "",
+    "creadoEnAgendaPro": "08/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jeronimo",
+    "apellido": "Lombardo",
+    "nombreCompleto": "Jeronimo Lombardo",
+    "telefono": "+543424211329",
+    "email": "",
+    "creadoEnAgendaPro": "13/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jeronimo",
+    "apellido": "Lombardo",
+    "nombreCompleto": "Jeronimo Lombardo",
+    "telefono": "+544211329",
+    "email": "",
+    "creadoEnAgendaPro": "04/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jerónimo",
+    "apellido": "Lombardo",
+    "nombreCompleto": "Jerónimo Lombardo",
+    "telefono": "+543425920211",
+    "email": "",
+    "creadoEnAgendaPro": "03/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jerónimo",
+    "apellido": "Lombardo",
+    "nombreCompleto": "Jerónimo Lombardo",
+    "telefono": "+54342520211",
+    "email": "",
+    "creadoEnAgendaPro": "15/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marco",
+    "apellido": "Luirg",
+    "nombreCompleto": "Marco Luirg",
+    "telefono": "+549342422848",
+    "email": "",
+    "creadoEnAgendaPro": "29/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nanno",
+    "apellido": "M",
+    "nombreCompleto": "Nanno M",
+    "telefono": "+543455532101",
+    "email": "",
+    "creadoEnAgendaPro": "12/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan pablo",
+    "apellido": "Maggioni",
+    "nombreCompleto": "Juan pablo Maggioni",
+    "telefono": "+543425317162",
+    "email": "",
+    "creadoEnAgendaPro": "20/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Julian",
+    "apellido": "Maini",
+    "nombreCompleto": "Julian Maini",
+    "telefono": "+543412503474",
+    "email": "",
+    "creadoEnAgendaPro": "29/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Malbert",
+    "nombreCompleto": "Valentino Malbert",
+    "telefono": "+543424762009",
+    "email": "paola_nelli@hotmail.com",
+    "creadoEnAgendaPro": "14/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fernando",
+    "apellido": "Marchese",
+    "nombreCompleto": "Fernando Marchese",
+    "telefono": "+543424282227",
+    "email": "",
+    "creadoEnAgendaPro": "24/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Benjamin",
+    "apellido": "Marchese",
+    "nombreCompleto": "Benjamin Marchese",
+    "telefono": "+549342516251",
+    "email": "",
+    "creadoEnAgendaPro": "25/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Benja",
+    "apellido": "MARCHESE",
+    "nombreCompleto": "Benja MARCHESE",
+    "telefono": "+543425162513",
+    "email": "",
+    "creadoEnAgendaPro": "25/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "lautaro",
+    "apellido": "marchionatti",
+    "nombreCompleto": "lautaro marchionatti",
+    "telefono": "+543425317976",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Marin",
+    "nombreCompleto": "Valentino Marin",
+    "telefono": "+543425012615",
+    "email": "lucreolivera@hotmail.com",
+    "creadoEnAgendaPro": "21/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ullmann",
+    "apellido": "Martin",
+    "nombreCompleto": "Ullmann Martin",
+    "telefono": "+5493424857690",
+    "email": "",
+    "creadoEnAgendaPro": "08/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ferreyra",
+    "apellido": "Martin",
+    "nombreCompleto": "Ferreyra Martin",
+    "telefono": "+543426153255",
+    "email": "",
+    "creadoEnAgendaPro": "24/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maximiliano",
+    "apellido": "Martinez",
+    "nombreCompleto": "Maximiliano Martinez",
+    "telefono": "+543425030399",
+    "email": "",
+    "creadoEnAgendaPro": "28/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Heraldo",
+    "apellido": "Martinez",
+    "nombreCompleto": "Heraldo Martinez",
+    "telefono": "+543424722462",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bruno",
+    "apellido": "Martinez",
+    "nombreCompleto": "Bruno Martinez",
+    "telefono": "+543482681665",
+    "email": "",
+    "creadoEnAgendaPro": "20/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Tomas",
+    "apellido": "Martinez",
+    "nombreCompleto": "Tomas Martinez",
+    "telefono": "+543498432237",
+    "email": "",
+    "creadoEnAgendaPro": "25/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Enzo",
+    "apellido": "Martínez",
+    "nombreCompleto": "Enzo Martínez",
+    "telefono": "+543482506178",
+    "email": "",
+    "creadoEnAgendaPro": "12/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Salvador",
+    "apellido": "Martinez Ross",
+    "nombreCompleto": "Salvador Martinez Ross",
+    "telefono": "+543424722462",
+    "email": "",
+    "creadoEnAgendaPro": "17/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martín",
+    "apellido": "Mediza",
+    "nombreCompleto": "Martín Mediza",
+    "telefono": "+543424687735",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jonathan",
+    "apellido": "Mendez",
+    "nombreCompleto": "Jonathan Mendez",
+    "telefono": "+543455532101",
+    "email": "",
+    "creadoEnAgendaPro": "08/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nanno",
+    "apellido": "Mendez",
+    "nombreCompleto": "Nanno Mendez",
+    "telefono": "+543455532101",
+    "email": "",
+    "creadoEnAgendaPro": "25/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Mendoza",
+    "nombreCompleto": "Juan Manuel Mendoza",
+    "telefono": "+543425843230",
+    "email": "",
+    "creadoEnAgendaPro": "03/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Thiago",
+    "apellido": "Merz",
+    "nombreCompleto": "Thiago Merz",
+    "telefono": "+543425770301",
+    "email": "alegtaborda@gmail.com",
+    "creadoEnAgendaPro": "10/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Merz",
+    "nombreCompleto": "Agustin Merz",
+    "telefono": "+543424476536",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Thiago",
+    "apellido": "Merz",
+    "nombreCompleto": "Thiago Merz",
+    "telefono": "+543426490324",
+    "email": "",
+    "creadoEnAgendaPro": "29/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Merz",
+    "nombreCompleto": "Agustin Merz",
+    "telefono": "+549342447653",
+    "email": "",
+    "creadoEnAgendaPro": "17/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Merz",
+    "nombreCompleto": "Agustin Merz",
+    "telefono": "+543425770301",
+    "email": "",
+    "creadoEnAgendaPro": "15/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Patricio",
+    "apellido": "Modina",
+    "nombreCompleto": "Patricio Modina",
+    "telefono": "+543425258339",
+    "email": "",
+    "creadoEnAgendaPro": "29/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Patricio",
+    "apellido": "Modina",
+    "nombreCompleto": "Patricio Modina",
+    "telefono": "+543425288339",
+    "email": "",
+    "creadoEnAgendaPro": "30/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Joaquin",
+    "apellido": "Muller",
+    "nombreCompleto": "Joaquin Muller",
+    "telefono": "+543424672307",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Augusto",
+    "apellido": "Müller",
+    "nombreCompleto": "Augusto Müller",
+    "telefono": "+543424626081",
+    "email": "mechipg11@gmail.com",
+    "creadoEnAgendaPro": "15/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Wanda",
+    "apellido": "Nara",
+    "nombreCompleto": "Wanda Nara",
+    "telefono": "",
+    "email": "",
+    "creadoEnAgendaPro": "09/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guillermo",
+    "apellido": "Nicola",
+    "nombreCompleto": "Guillermo Nicola",
+    "telefono": "+543498411430",
+    "email": "gnicola@surcos.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nico",
+    "apellido": "Niedermayer",
+    "nombreCompleto": "Nico Niedermayer",
+    "telefono": "+543424057514",
+    "email": "",
+    "creadoEnAgendaPro": "03/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Niello",
+    "nombreCompleto": "Pedro Niello",
+    "telefono": "+543425351341",
+    "email": "",
+    "creadoEnAgendaPro": "19/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ariel",
+    "apellido": "Obregon",
+    "nombreCompleto": "Ariel Obregon",
+    "telefono": "+543425213903",
+    "email": "",
+    "creadoEnAgendaPro": "01/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marcelo",
+    "apellido": "Ocampo",
+    "nombreCompleto": "Marcelo Ocampo",
+    "telefono": "+543424770887",
+    "email": "",
+    "creadoEnAgendaPro": "26/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Ignacio",
+    "apellido": "Olguin",
+    "nombreCompleto": "Juan Ignacio Olguin",
+    "telefono": "+543435066172",
+    "email": "",
+    "creadoEnAgendaPro": "14/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maximiliano",
+    "apellido": "Oliva",
+    "nombreCompleto": "Maximiliano Oliva",
+    "telefono": "+543424212798",
+    "email": "",
+    "creadoEnAgendaPro": "10/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Cristian",
+    "apellido": "Ordoñez",
+    "nombreCompleto": "Cristian Ordoñez",
+    "telefono": "+543424866347",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alexis",
+    "apellido": "Orellano",
+    "nombreCompleto": "Alexis Orellano",
+    "telefono": "+543424879508",
+    "email": "",
+    "creadoEnAgendaPro": "03/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Cali",
+    "apellido": "Orellano",
+    "nombreCompleto": "Cali Orellano",
+    "telefono": "+543492660958",
+    "email": "",
+    "creadoEnAgendaPro": "25/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bautista",
+    "apellido": "Orio",
+    "nombreCompleto": "Bautista Orio",
+    "telefono": "+543425900630",
+    "email": "",
+    "creadoEnAgendaPro": "21/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Bautista",
+    "apellido": "Orio",
+    "nombreCompleto": "Bautista Orio",
+    "telefono": "+54342590630",
+    "email": "",
+    "creadoEnAgendaPro": "04/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Emanuel",
+    "apellido": "Ortellado",
+    "nombreCompleto": "Emanuel Ortellado",
+    "telefono": "+543751479980",
+    "email": "",
+    "creadoEnAgendaPro": "08/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "juan",
+    "apellido": "Oviedo",
+    "nombreCompleto": "juan Oviedo",
+    "telefono": "+543425785352",
+    "email": "",
+    "creadoEnAgendaPro": "24/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Oviedo",
+    "nombreCompleto": "Juan Manuel Oviedo",
+    "telefono": "+543427585352",
+    "email": "",
+    "creadoEnAgendaPro": "09/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Oviedo",
+    "nombreCompleto": "Juan Manuel Oviedo",
+    "telefono": "+543425785352",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Federico",
+    "apellido": "Palacio",
+    "nombreCompleto": "Federico Palacio",
+    "telefono": "+543425271266",
+    "email": "",
+    "creadoEnAgendaPro": "31/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "fernando",
+    "apellido": "paloti",
+    "nombreCompleto": "fernando paloti",
+    "telefono": "+543425466030",
+    "email": "",
+    "creadoEnAgendaPro": "19/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mercedes",
+    "apellido": "Paniagua",
+    "nombreCompleto": "Mercedes Paniagua",
+    "telefono": "+543424626081",
+    "email": "",
+    "creadoEnAgendaPro": "18/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ignacio",
+    "apellido": "Parodi",
+    "nombreCompleto": "Ignacio Parodi",
+    "telefono": "+54349241295",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nacho",
+    "apellido": "Parodi",
+    "nombreCompleto": "Nacho Parodi",
+    "telefono": "+543492412950",
+    "email": "",
+    "creadoEnAgendaPro": "16/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Vaninamalano@gmail.com",
+    "apellido": "Passerini",
+    "nombreCompleto": "Vaninamalano@gmail.com Passerini",
+    "telefono": "+543401520794",
+    "email": "",
+    "creadoEnAgendaPro": "15/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mario",
+    "apellido": "Passerini",
+    "nombreCompleto": "Mario Passerini",
+    "telefono": "+543424674851",
+    "email": "",
+    "creadoEnAgendaPro": "21/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Eliana",
+    "apellido": "Peñalva",
+    "nombreCompleto": "Eliana Peñalva",
+    "telefono": "+543425123015",
+    "email": "",
+    "creadoEnAgendaPro": "11/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Peres",
+    "nombreCompleto": "Carlos Peres",
+    "telefono": "+54077117",
+    "email": "",
+    "creadoEnAgendaPro": "30/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Peres",
+    "nombreCompleto": "Carlos Peres",
+    "telefono": "+540777117",
+    "email": "",
+    "creadoEnAgendaPro": "14/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Julio",
+    "apellido": "Pereyra",
+    "nombreCompleto": "Julio Pereyra",
+    "telefono": "+543425486743",
+    "email": "",
+    "creadoEnAgendaPro": "01/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gabriel",
+    "apellido": "Perez",
+    "nombreCompleto": "Gabriel Perez",
+    "telefono": "+543425785500",
+    "email": "",
+    "creadoEnAgendaPro": "23/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Perez",
+    "nombreCompleto": "Santiago Perez",
+    "telefono": "+543455510858",
+    "email": "",
+    "creadoEnAgendaPro": "01/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Franco",
+    "apellido": "Perez",
+    "nombreCompleto": "Franco Perez",
+    "telefono": "+543425514623",
+    "email": "",
+    "creadoEnAgendaPro": "27/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martin",
+    "apellido": "Perez",
+    "nombreCompleto": "Martin Perez",
+    "telefono": "+543425232328",
+    "email": "",
+    "creadoEnAgendaPro": "23/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "nombreCompleto": "Juan Pérez",
+    "telefono": "+549999999990",
+    "email": "clientedeejemplo2@agendapro.com",
+    "creadoEnAgendaPro": "07/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Pizarro",
+    "nombreCompleto": "Facundo Pizarro",
+    "telefono": "+543425462686",
+    "email": "",
+    "creadoEnAgendaPro": "10/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nico",
+    "apellido": "ponce",
+    "nombreCompleto": "Nico ponce",
+    "telefono": "+543425047038",
+    "email": "",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Ponzo",
+    "nombreCompleto": "Nicolas Ponzo",
+    "telefono": "+543425047038",
+    "email": "",
+    "creadoEnAgendaPro": "04/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Adrián",
+    "apellido": "Ponzo",
+    "nombreCompleto": "Adrián Ponzo",
+    "telefono": "+543425047038",
+    "email": "",
+    "creadoEnAgendaPro": "02/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Adrián",
+    "apellido": "Ponzo",
+    "nombreCompleto": "Adrián Ponzo",
+    "telefono": "+545047038",
+    "email": "adrianponzo@gmail.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "ADRIAN",
+    "apellido": "PONZO",
+    "nombreCompleto": "ADRIAN PONZO",
+    "telefono": "+54342504738",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "Ponzo Vignatti",
+    "nombreCompleto": "Nicolás Ponzo Vignatti",
+    "telefono": "+543425047038",
+    "email": "",
+    "creadoEnAgendaPro": "03/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guille",
+    "apellido": "Pretto",
+    "nombreCompleto": "Guille Pretto",
+    "telefono": "+543424860878",
+    "email": "guillepretto@gmail.com",
+    "creadoEnAgendaPro": "22/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Quarin",
+    "nombreCompleto": "Juan Quarin",
+    "telefono": "+543482315497",
+    "email": "juaniquarin@gmail.com",
+    "creadoEnAgendaPro": "05/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Ignacio",
+    "apellido": "Quarin",
+    "nombreCompleto": "Juan Ignacio Quarin",
+    "telefono": "+543482315497",
+    "email": "",
+    "creadoEnAgendaPro": "28/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Quiros",
+    "nombreCompleto": "Francisco Quiros",
+    "telefono": "+543425080556",
+    "email": "",
+    "creadoEnAgendaPro": "01/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro fabian",
+    "apellido": "Rabellino",
+    "nombreCompleto": "Alejandro fabian Rabellino",
+    "telefono": "+543497658632",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Luca",
+    "apellido": "Racagni",
+    "nombreCompleto": "Luca Racagni",
+    "telefono": "+543425190712",
+    "email": "",
+    "creadoEnAgendaPro": "27/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Walter",
+    "apellido": "Radduso",
+    "nombreCompleto": "Walter Radduso",
+    "telefono": "+549349840299",
+    "email": "",
+    "creadoEnAgendaPro": "10/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Walter",
+    "apellido": "Radduso",
+    "nombreCompleto": "Walter Radduso",
+    "telefono": "+543498402997",
+    "email": "",
+    "creadoEnAgendaPro": "28/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gonzalo",
+    "apellido": "Ramirez",
+    "nombreCompleto": "Gonzalo Ramirez",
+    "telefono": "+543496415227",
+    "email": "",
+    "creadoEnAgendaPro": "08/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maximiliano",
+    "apellido": "Reichert",
+    "nombreCompleto": "Maximiliano Reichert",
+    "telefono": "+543434169187",
+    "email": "",
+    "creadoEnAgendaPro": "04/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lisandro",
+    "apellido": "Reynoso",
+    "nombreCompleto": "Lisandro Reynoso",
+    "telefono": "+543425929278",
+    "email": "",
+    "creadoEnAgendaPro": "18/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jorge",
+    "apellido": "Reynoso",
+    "nombreCompleto": "Jorge Reynoso",
+    "telefono": "+543426316993",
+    "email": "",
+    "creadoEnAgendaPro": "18/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Riera",
+    "nombreCompleto": "Juan Riera",
+    "telefono": "+543425406499",
+    "email": "",
+    "creadoEnAgendaPro": "03/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan manuel",
+    "apellido": "Riera",
+    "nombreCompleto": "Juan manuel Riera",
+    "telefono": "+543425406499",
+    "email": "",
+    "creadoEnAgendaPro": "29/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Estanislao",
+    "apellido": "Riera",
+    "nombreCompleto": "Estanislao Riera",
+    "telefono": "+543425122031",
+    "email": "",
+    "creadoEnAgendaPro": "25/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Augusto",
+    "apellido": "Ripke",
+    "nombreCompleto": "Augusto Ripke",
+    "telefono": "+543424384196",
+    "email": "escribanafrutos@gmail.com",
+    "creadoEnAgendaPro": "22/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Contanza",
+    "apellido": "Risiga",
+    "nombreCompleto": "Contanza Risiga",
+    "telefono": "+546980465",
+    "email": "",
+    "creadoEnAgendaPro": "02/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gonzalo",
+    "apellido": "Rodas",
+    "nombreCompleto": "Gonzalo Rodas",
+    "telefono": "+543425346635",
+    "email": "",
+    "creadoEnAgendaPro": "21/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agus",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Agus Rodriguez",
+    "telefono": "+543424067390",
+    "email": "",
+    "creadoEnAgendaPro": "14/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Facundo",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Facundo Rodriguez",
+    "telefono": "+543424484667",
+    "email": "facundorodrigueztarra@gmail.com",
+    "creadoEnAgendaPro": "13/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Juan Rodriguez",
+    "telefono": "+54345288645",
+    "email": "",
+    "creadoEnAgendaPro": "26/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Nicolas Rodriguez",
+    "telefono": "+543425919260",
+    "email": "",
+    "creadoEnAgendaPro": "04/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agus",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Agus Rodriguez",
+    "telefono": "+543434067390",
+    "email": "",
+    "creadoEnAgendaPro": "30/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Pablo",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Juan Pablo Rodriguez",
+    "telefono": "+543425459653",
+    "email": "jprodriguez467@gmail.com",
+    "creadoEnAgendaPro": "18/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Luis Rodriguez",
+    "telefono": "+543424701100",
+    "email": "",
+    "creadoEnAgendaPro": "18/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Pablo",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Juan Pablo Rodriguez",
+    "telefono": "+540334254596",
+    "email": "",
+    "creadoEnAgendaPro": "11/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Rodriguez",
+    "nombreCompleto": "Luis Rodriguez",
+    "telefono": "+543424781100",
+    "email": "",
+    "creadoEnAgendaPro": "02/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damian",
+    "apellido": "Rodríguez",
+    "nombreCompleto": "Damian Rodríguez",
+    "telefono": "+543482411477",
+    "email": "",
+    "creadoEnAgendaPro": "16/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nicolás",
+    "apellido": "Rodríguez",
+    "nombreCompleto": "Nicolás Rodríguez",
+    "telefono": "+543424056013",
+    "email": "rodri.nicolasr.2005@gmail.com",
+    "creadoEnAgendaPro": "21/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellido": "Rodríguez",
+    "nombreCompleto": "Juan Manuel Rodríguez",
+    "telefono": "+543425135835",
+    "email": "",
+    "creadoEnAgendaPro": "12/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Damian Jesus",
+    "apellido": "Rodriguez Fusta",
+    "nombreCompleto": "Damian Jesus Rodriguez Fusta",
+    "telefono": "+543482411477",
+    "email": "",
+    "creadoEnAgendaPro": "09/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Rojas",
+    "nombreCompleto": "Carlos Rojas",
+    "telefono": "+54535695",
+    "email": "",
+    "creadoEnAgendaPro": "05/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Diego",
+    "apellido": "Roldan",
+    "nombreCompleto": "Diego Roldan",
+    "telefono": "+543424462433",
+    "email": "",
+    "creadoEnAgendaPro": "28/04/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Diego",
+    "apellido": "Roldan",
+    "nombreCompleto": "Diego Roldan",
+    "telefono": "+543424624331",
+    "email": "",
+    "creadoEnAgendaPro": "01/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Christian",
+    "apellido": "Rolon",
+    "nombreCompleto": "Christian Rolon",
+    "telefono": "+545522310",
+    "email": "",
+    "creadoEnAgendaPro": "20/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Rolon",
+    "nombreCompleto": "Alejandro Rolon",
+    "telefono": "+543425205397",
+    "email": "",
+    "creadoEnAgendaPro": "12/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "rolonalejandro861@gmail.com",
+    "apellido": "Rolon",
+    "nombreCompleto": "rolonalejandro861@gmail.com Rolon",
+    "telefono": "+543425205391",
+    "email": "",
+    "creadoEnAgendaPro": "24/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro Emmanuel",
+    "apellido": "Rolon",
+    "nombreCompleto": "Alejandro Emmanuel Rolon",
+    "telefono": "+543425205391",
+    "email": "",
+    "creadoEnAgendaPro": "13/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Rolon",
+    "nombreCompleto": "Alejandro Rolon",
+    "telefono": "+543425205391",
+    "email": "rolonalejandro163@gmail.com",
+    "creadoEnAgendaPro": "13/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Christian",
+    "apellido": "Rolon",
+    "nombreCompleto": "Christian Rolon",
+    "telefono": "+5493425522310",
+    "email": "",
+    "creadoEnAgendaPro": "26/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Cesar Gerardo",
+    "apellido": "ROLON",
+    "nombreCompleto": "Cesar Gerardo ROLON",
+    "telefono": "+543424292301",
+    "email": "",
+    "creadoEnAgendaPro": "28/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Romang",
+    "nombreCompleto": "Francisco Romang",
+    "telefono": "+549349740155",
+    "email": "",
+    "creadoEnAgendaPro": "28/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Romang",
+    "nombreCompleto": "Francisco Romang",
+    "telefono": "+543497401553",
+    "email": "",
+    "creadoEnAgendaPro": "23/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martina",
+    "apellido": "Romero",
+    "nombreCompleto": "Martina Romero",
+    "telefono": "+543424436654",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martina",
+    "apellido": "Romero",
+    "nombreCompleto": "Martina Romero",
+    "telefono": "+543124436654",
+    "email": "",
+    "creadoEnAgendaPro": "12/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mateo",
+    "apellido": "Rosales",
+    "nombreCompleto": "Mateo Rosales",
+    "telefono": "+543425945903",
+    "email": "",
+    "creadoEnAgendaPro": "24/03/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Geronimo",
+    "apellido": "Rosales",
+    "nombreCompleto": "Geronimo Rosales",
+    "telefono": "+543424466149",
+    "email": "",
+    "creadoEnAgendaPro": "11/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jose",
+    "apellido": "Rosales",
+    "nombreCompleto": "Jose Rosales",
+    "telefono": "+543424728200",
+    "email": "",
+    "creadoEnAgendaPro": "07/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Rose",
+    "nombreCompleto": "Juan Rose",
+    "telefono": "+543425459653",
+    "email": "",
+    "creadoEnAgendaPro": "11/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Micael",
+    "apellido": "Rossa",
+    "nombreCompleto": "Micael Rossa",
+    "telefono": "+543425317710",
+    "email": "",
+    "creadoEnAgendaPro": "11/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gaston",
+    "apellido": "rousselot",
+    "nombreCompleto": "Gaston rousselot",
+    "telefono": "+543425331120",
+    "email": "",
+    "creadoEnAgendaPro": "23/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fernando",
+    "apellido": "Rubio",
+    "nombreCompleto": "Fernando Rubio",
+    "telefono": "+543425319414",
+    "email": "rubiofernandoluis@gmail.com",
+    "creadoEnAgendaPro": "13/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Jorge",
+    "apellido": "Saccone",
+    "nombreCompleto": "Jorge Saccone",
+    "telefono": "+544328651",
+    "email": "",
+    "creadoEnAgendaPro": "26/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Leonel",
+    "apellido": "Salas",
+    "nombreCompleto": "Leonel Salas",
+    "telefono": "+543425065835",
+    "email": "",
+    "creadoEnAgendaPro": "24/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Santiago",
+    "apellido": "Salvatierra",
+    "nombreCompleto": "Santiago Salvatierra",
+    "telefono": "+543401520569",
+    "email": "",
+    "creadoEnAgendaPro": "05/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "sama",
+    "nombreCompleto": "Francisco sama",
+    "telefono": "+54342630619",
+    "email": "",
+    "creadoEnAgendaPro": "30/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Sanchez",
+    "nombreCompleto": "Juan Sanchez",
+    "telefono": "+543426985517",
+    "email": "",
+    "creadoEnAgendaPro": "05/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "luciano",
+    "apellido": "sartori",
+    "nombreCompleto": "luciano sartori",
+    "telefono": "+543425461743",
+    "email": "evelyn_925_77@hotmail.com",
+    "creadoEnAgendaPro": "18/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maximo",
+    "apellido": "Sartori",
+    "nombreCompleto": "Maximo Sartori",
+    "telefono": "+543425128181",
+    "email": "",
+    "creadoEnAgendaPro": "23/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Luciano",
+    "apellido": "Sartori",
+    "nombreCompleto": "Luciano Sartori",
+    "telefono": "+543425128181",
+    "email": "",
+    "creadoEnAgendaPro": "11/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mateo",
+    "apellido": "Schneider",
+    "nombreCompleto": "Mateo Schneider",
+    "telefono": "+543435096367",
+    "email": "",
+    "creadoEnAgendaPro": "03/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mateo",
+    "apellido": "Schneider",
+    "nombreCompleto": "Mateo Schneider",
+    "telefono": "+545096367",
+    "email": "",
+    "creadoEnAgendaPro": "03/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Diego",
+    "apellido": "Segalla",
+    "nombreCompleto": "Diego Segalla",
+    "telefono": "+543425035532",
+    "email": "",
+    "creadoEnAgendaPro": "16/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Sereno",
+    "nombreCompleto": "Carlos Sereno",
+    "telefono": "+543424629512",
+    "email": "",
+    "creadoEnAgendaPro": "12/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mario",
+    "apellido": "Silvestre",
+    "nombreCompleto": "Mario Silvestre",
+    "telefono": "+543426307912",
+    "email": "",
+    "creadoEnAgendaPro": "22/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ariel",
+    "apellido": "Sin pelos",
+    "nombreCompleto": "Ariel Sin pelos",
+    "telefono": "+543425472221",
+    "email": "",
+    "creadoEnAgendaPro": "17/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lucas",
+    "apellido": "Solis",
+    "nombreCompleto": "Lucas Solis",
+    "telefono": "+543424061755",
+    "email": "",
+    "creadoEnAgendaPro": "24/12/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Genaro",
+    "apellido": "Sosa",
+    "nombreCompleto": "Genaro Sosa",
+    "telefono": "+549434054510",
+    "email": "",
+    "creadoEnAgendaPro": "24/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Christian",
+    "apellido": "Sosa",
+    "nombreCompleto": "Christian Sosa",
+    "telefono": "+543489216574",
+    "email": "",
+    "creadoEnAgendaPro": "26/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Iván",
+    "apellido": "Stebler",
+    "nombreCompleto": "Iván Stebler",
+    "telefono": "+543425491064",
+    "email": "",
+    "creadoEnAgendaPro": "22/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustín",
+    "apellido": "Steeman",
+    "nombreCompleto": "Agustín Steeman",
+    "telefono": "+543425179181",
+    "email": "",
+    "creadoEnAgendaPro": "12/09/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Agustin",
+    "apellido": "Steeman",
+    "nombreCompleto": "Agustin Steeman",
+    "telefono": "+549342517918",
+    "email": "",
+    "creadoEnAgendaPro": "20/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Nelson",
+    "apellido": "Swiatek",
+    "nombreCompleto": "Nelson Swiatek",
+    "telefono": "+543425600258",
+    "email": "",
+    "creadoEnAgendaPro": "17/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Lautaro",
+    "apellido": "Szokala",
+    "nombreCompleto": "Lautaro Szokala",
+    "telefono": "+543426283723",
+    "email": "",
+    "creadoEnAgendaPro": "27/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ricardo",
+    "apellido": "Szupiany",
+    "nombreCompleto": "Ricardo Szupiany",
+    "telefono": "+54345110947",
+    "email": "",
+    "creadoEnAgendaPro": "27/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ricardo",
+    "apellido": "Szupiany",
+    "nombreCompleto": "Ricardo Szupiany",
+    "telefono": "+543425110947",
+    "email": "",
+    "creadoEnAgendaPro": "01/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "matias",
+    "apellido": "tellini",
+    "nombreCompleto": "matias tellini",
+    "telefono": "+543425507243",
+    "email": "",
+    "creadoEnAgendaPro": "01/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Marcelo",
+    "apellido": "Tesarik",
+    "nombreCompleto": "Marcelo Tesarik",
+    "telefono": "+543424062704",
+    "email": "",
+    "creadoEnAgendaPro": "08/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gastón",
+    "apellido": "Tofaletti",
+    "nombreCompleto": "Gastón Tofaletti",
+    "telefono": "+54345309097",
+    "email": "",
+    "creadoEnAgendaPro": "09/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gastón",
+    "apellido": "Tofaletti",
+    "nombreCompleto": "Gastón Tofaletti",
+    "telefono": "+543425309097",
+    "email": "gastontofaletti0714@gmail.com",
+    "creadoEnAgendaPro": "12/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rodrigo",
+    "apellido": "Torra",
+    "nombreCompleto": "Rodrigo Torra",
+    "telefono": "+549343451911",
+    "email": "",
+    "creadoEnAgendaPro": "03/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rodrigo",
+    "apellido": "Torra",
+    "nombreCompleto": "Rodrigo Torra",
+    "telefono": "+543434519114",
+    "email": "",
+    "creadoEnAgendaPro": "17/07/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Matías",
+    "apellido": "Tur",
+    "nombreCompleto": "Matías Tur",
+    "telefono": "+543425263893",
+    "email": "",
+    "creadoEnAgendaPro": "18/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martin",
+    "apellido": "Ullmann",
+    "nombreCompleto": "Martin Ullmann",
+    "telefono": "+543424857690",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Martin",
+    "apellido": "Ullmann",
+    "nombreCompleto": "Martin Ullmann",
+    "telefono": "+54114857690",
+    "email": "",
+    "creadoEnAgendaPro": "28/10/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "emanuel",
+    "apellido": "Uriarte",
+    "nombreCompleto": "emanuel Uriarte",
+    "telefono": "+543425767551",
+    "email": "",
+    "creadoEnAgendaPro": "20/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "facundo",
+    "apellido": "valdez",
+    "nombreCompleto": "facundo valdez",
+    "telefono": "+543458415131",
+    "email": "",
+    "creadoEnAgendaPro": "23/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Chino",
+    "apellido": "vecino",
+    "nombreCompleto": "Chino vecino",
+    "telefono": "+543425459653",
+    "email": "",
+    "creadoEnAgendaPro": "17/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Angel",
+    "apellido": "Vecino de la esquina",
+    "nombreCompleto": "Angel Vecino de la esquina",
+    "telefono": "+543426157249",
+    "email": "",
+    "creadoEnAgendaPro": "25/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Vecino de luis",
+    "nombreCompleto": "Francisco Vecino de luis",
+    "telefono": "+545466030",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Fernando",
+    "apellido": "Vecino de luis",
+    "nombreCompleto": "Fernando Vecino de luis",
+    "telefono": "+545493425466",
+    "email": "",
+    "creadoEnAgendaPro": "26/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Aquiles",
+    "apellido": "Velzi",
+    "nombreCompleto": "Aquiles Velzi",
+    "telefono": "+543426300732",
+    "email": "",
+    "creadoEnAgendaPro": "07/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Federico",
+    "apellido": "Venanzi",
+    "nombreCompleto": "Federico Venanzi",
+    "telefono": "+543425518518",
+    "email": "venanzi.federico8@gmail.com",
+    "creadoEnAgendaPro": "11/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Ventre",
+    "nombreCompleto": "Valentino Ventre",
+    "telefono": "+542154548454",
+    "email": "",
+    "creadoEnAgendaPro": "21/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ventre",
+    "nombreCompleto": "Carlos Ventre",
+    "telefono": "+543425332612",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ventre",
+    "nombreCompleto": "Carlos Ventre",
+    "telefono": "+545332612",
+    "email": "autoservicesnatafe@gmail.com",
+    "creadoEnAgendaPro": "18/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Ventre",
+    "nombreCompleto": "Valentino Ventre",
+    "telefono": "+545332612",
+    "email": "",
+    "creadoEnAgendaPro": "10/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Ventre",
+    "nombreCompleto": "Valentino Ventre",
+    "telefono": "+5493425332611",
+    "email": "",
+    "creadoEnAgendaPro": "09/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Ventre",
+    "nombreCompleto": "Valentino Ventre",
+    "telefono": "+543425332612",
+    "email": "",
+    "creadoEnAgendaPro": "11/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Valentino",
+    "apellido": "Ventre",
+    "nombreCompleto": "Valentino Ventre",
+    "telefono": "+54428332612",
+    "email": "",
+    "creadoEnAgendaPro": "04/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ventre",
+    "nombreCompleto": "Carlos Ventre",
+    "telefono": "+54425332612",
+    "email": "",
+    "creadoEnAgendaPro": "06/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Ventre",
+    "nombreCompleto": "Carlos Ventre",
+    "telefono": "+5425332612",
+    "email": "",
+    "creadoEnAgendaPro": "06/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Gustavo",
+    "apellido": "Vergara",
+    "nombreCompleto": "Gustavo Vergara",
+    "telefono": "+543743512671",
+    "email": "",
+    "creadoEnAgendaPro": "27/11/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Guido",
+    "apellido": "Vicentin",
+    "nombreCompleto": "Guido Vicentin",
+    "telefono": "+543493460302",
+    "email": "",
+    "creadoEnAgendaPro": "01/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Maria Esmeralda",
+    "apellido": "Videla",
+    "nombreCompleto": "Maria Esmeralda Videla",
+    "telefono": "+543426147801",
+    "email": "",
+    "creadoEnAgendaPro": "31/05/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Alcira",
+    "apellido": "Vijo",
+    "nombreCompleto": "Alcira Vijo",
+    "telefono": "+545493424322002",
+    "email": "",
+    "creadoEnAgendaPro": "05/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Sebastian",
+    "apellido": "Villalonga",
+    "nombreCompleto": "Sebastian Villalonga",
+    "telefono": "+543425360955",
+    "email": "",
+    "creadoEnAgendaPro": "28/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Juan Pablo",
+    "apellido": "Villarraza",
+    "nombreCompleto": "Juan Pablo Villarraza",
+    "telefono": "+543434686415",
+    "email": "",
+    "creadoEnAgendaPro": "19/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "TOMY Hijo de David",
+    "apellido": "VILLARROYA",
+    "nombreCompleto": "TOMY Hijo de David VILLARROYA",
+    "telefono": "+543425169664",
+    "email": "",
+    "creadoEnAgendaPro": "18/02/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Julian",
+    "apellido": "Vino",
+    "nombreCompleto": "Julian Vino",
+    "telefono": "+543426143569",
+    "email": "",
+    "creadoEnAgendaPro": "06/06/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Faundo",
+    "apellido": "Vino",
+    "nombreCompleto": "Faundo Vino",
+    "telefono": "+543424300874",
+    "email": "facuvino96@gmail.com",
+    "creadoEnAgendaPro": "14/02/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "ALEXIS",
+    "apellido": "WAEFLER",
+    "nombreCompleto": "ALEXIS WAEFLER",
+    "telefono": "+5491139583940",
+    "email": "",
+    "creadoEnAgendaPro": "23/01/2026",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Mateo",
+    "apellido": "Williams",
+    "nombreCompleto": "Mateo Williams",
+    "telefono": "+543425453603",
+    "email": "",
+    "creadoEnAgendaPro": "06/04/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Ignacio",
+    "apellido": "Zoccarato",
+    "nombreCompleto": "Ignacio Zoccarato",
+    "telefono": "+543424292495",
+    "email": "",
+    "creadoEnAgendaPro": "28/03/2025",
+    "ultimoCorte": null,
+    "importado": true
+  },
+  {
+    "nombre": "Rosa",
+    "apellido": "Zumoffen",
+    "nombreCompleto": "Rosa Zumoffen",
+    "telefono": "+543424481584",
+    "email": "andres29yodice@gmail.com",
+    "creadoEnAgendaPro": "16/08/2025",
+    "ultimoCorte": null,
+    "importado": true
+  }
+]
