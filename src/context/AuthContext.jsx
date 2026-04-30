@@ -20,17 +20,14 @@ export const AuthProvider = ({ children }) => {
       if (currentUser) {
         setUser(currentUser);
         try {
-          // Verificar si es admin
-          const adminSnap = await getDoc(doc(db, 'admins', 'config'));
-          if (adminSnap.exists()) {
-            const telefonos = adminSnap.data().telefonos || [];
-            const tel = currentUser.phoneNumber;
-            const adminCheck =
-              telefonos.includes(tel) ||
-              telefonos.includes(tel?.replace('+549', '+54')) ||
-              telefonos.includes(tel?.replace('+54', '+549'));
-            setIsAdmin(adminCheck);
-          }
+    // Admin hardcodeado
+const ADMIN_PHONES = ['+5493425459653', '+543425459653'];
+const tel = currentUser.phoneNumber;
+const adminCheck =
+  ADMIN_PHONES.includes(tel) ||
+  ADMIN_PHONES.includes(tel?.replace('+549', '+54')) ||
+  ADMIN_PHONES.includes(tel?.replace('+54', '+549'));
+setIsAdmin(adminCheck);
 
           // Cargar datos del usuario
           const userRef  = doc(db, 'usuarios', currentUser.uid);
