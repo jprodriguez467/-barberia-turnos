@@ -1,186 +1,187 @@
-import React, { createContext, useState, useEffect } from 'react';
-import { signInAnonymously, onAuthStateChanged, signOut } from 'firebase/auth';
-import { doc, setDoc, getDoc, updateDoc, collection, query, where, getDocs, serverTimestamp } from 'firebase/firestore';
-import { auth, db } from '../services/firebase';
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import {
+  signInWithPhoneNumber,
+  RecaptchaVerifier,
+  onAuthStateChanged,
+  signOut,
+  signInAnonymously,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from 'firebase/auth';
+import {
+  doc,
+  setDoc,
+  getDoc,
+  updateDoc,
+  collection,
+  query,
+  where,
+  getDocs,
+  serverTimestamp,
+} from 'firebase/firestore';
+import { auth, db } from '../firebase';
 import toast from 'react-hot-toast';
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
-// Admin hardcodeado
+// ── Admins: tu email de Google + tu número de teléfono ──────────────────────
+const ADMIN_EMAILS = ['jprodriguez467@gmail.com']; // ← poné tu email real de Google
 const ADMIN_PHONES = ['+5493425459653', '+543425459653'];
 
-const capitalize = (str) =>
-  str ? str.trim().replace(/\b\w/g, (c) => c.toUpperCase()) : '';
-
 export const AuthProvider = ({ children }) => {
-  const [user, setUser]                             = useState(null);
-  const [loading, setLoading]                       = useState(true);
-  const [userDoc, setUserDoc]                       = useState(null);
-  const [needsProfile, setNeedsProfile]             = useState(false);
-  const [isAdmin, setIsAdmin]                       = useState(false);
+  const [user, setUser]                       = useState(null);
+  const [isAdmin, setIsAdmin]                 = useState(false);
+  const [loading, setLoading]                 = useState(true);
+  const [confirmationResult, setConfirmationResult] = useState(null);
+  const [verificationId, setVerificationId]   = useState(null);
+  const [needsProfile, setNeedsProfile]       = useState(false);
+  const [clienteData, setClienteData]         = useState(null);
 
-  // ── Observador de sesión ──────────────────────────────────────────────────
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    const unsub = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        try {
-          // Chequeo admin por teléfono (login por SMS)
-          if (currentUser.phoneNumber) {
-            const tel = currentUser.phoneNumber;
-            const adminCheck =
-              ADMIN_PHONES.includes(tel) ||
-              ADMIN_PHONES.includes(tel?.replace('+549', '+54')) ||
-              ADMIN_PHONES.includes(tel?.replace('+54', '+549'));
-            setIsAdmin(adminCheck);
-          }
 
-          // Cargar documento del usuario
-          const userRef  = doc(db, 'usuarios', currentUser.uid);
-          const userSnap = await getDoc(userRef);
-          if (userSnap.exists()) {
-            const data = userSnap.data();
-            setUserDoc(data);
-            if (!data.nombre || data.nombre.trim() === '') setNeedsProfile(true);
-          }
-        } catch (error) {
-          console.error('Error cargando usuario:', error);
-        }
+        // Chequeo admin por email (Google) o por teléfono
+        const tel   = currentUser.phoneNumber;
+        const email = currentUser.email;
+        const adminCheck =
+          ADMIN_EMAILS.includes(email) ||
+          ADMIN_PHONES.includes(tel) ||
+          ADMIN_PHONES.includes(tel?.replace('+549', '+54')) ||
+          ADMIN_PHONES.includes(tel?.replace('+54', '+549'));
+        setIsAdmin(adminCheck);
       } else {
         setUser(null);
-        setUserDoc(null);
-        setNeedsProfile(false);
         setIsAdmin(false);
+        setClienteData(null);
       }
       setLoading(false);
     });
-    return () => unsubscribe();
+    return () => unsub();
   }, []);
 
-  // ── Buscar cliente por nombre en Firestore ────────────────────────────────
-  const buscarClientePorNombre = async (nombre, apellido) => {
+  // ── Login con Google (solo admin) ────────────────────────────────────────
+  const loginWithGoogle = async () => {
     try {
-      const nombreNorm    = capitalize(nombre);
-      const apellidoNorm  = capitalize(apellido);
-      const nombreCompleto = `${nombreNorm} ${apellidoNorm}`;
+      const provider = new GoogleAuthProvider();
+      const result   = await signInWithPopup(auth, provider);
+      const email    = result.user.email;
 
-      const encontrados = [];
+      if (!ADMIN_EMAILS.includes(email)) {
+        // No es admin → cerramos sesión y devolvemos error
+        await signOut(auth);
+        return { success: false, error: 'Este correo no tiene acceso como administrador.' };
+      }
+      return { success: true };
+    } catch (error) {
+      console.error('Google login error:', error);
+      return { success: false, error: 'Error al iniciar sesión con Google.' };
+    }
+  };
 
-      // Buscar en colección "clientes" (importados de AgendaPro)
-      const colecciones = ['clientes', 'usuarios'];
-      for (const col of colecciones) {
-        // Por nombreCompleto
-        const q1 = query(collection(db, col), where('nombreCompleto', '==', nombreCompleto));
-        const s1 = await getDocs(q1);
-        s1.docs.forEach(d => {
-          if (!encontrados.find(r => r.id === d.id)) {
-            encontrados.push({ id: d.id, _col: col, ...d.data() });
-          }
+  // ── Login por nombre (clientes) ──────────────────────────────────────────
+  const loginByName = async (nombre, apellido, whatsapp = null) => {
+    try {
+      const nombreNorm   = nombre.trim().toLowerCase();
+      const apellidoNorm = apellido.trim().toLowerCase();
+
+      const clientesRef = collection(db, 'clientes');
+      const q = query(
+        clientesRef,
+        where('nombreNorm', '==', nombreNorm),
+        where('apellidoNorm', '==', apellidoNorm)
+      );
+      const snap = await getDocs(q);
+
+      if (snap.empty) {
+        // Cliente nuevo
+        if (!whatsapp) return { found: false, needsWhatsapp: true };
+
+        await signInAnonymously(auth);
+        const docRef = doc(clientesRef);
+        await setDoc(docRef, {
+          nombre:       nombre.trim(),
+          apellido:     apellido.trim(),
+          nombreNorm,
+          apellidoNorm,
+          whatsapp,
+          visitas:      0,
+          descuento:    0,
+          creadoEn:     serverTimestamp(),
         });
-
-        // Por nombre + apellido separados
-        if (encontrados.length === 0) {
-          const q2 = query(
-            collection(db, col),
-            where('nombre', '==', nombreNorm),
-            where('apellido', '==', apellidoNorm)
-          );
-          const s2 = await getDocs(q2);
-          s2.docs.forEach(d => {
-            if (!encontrados.find(r => r.id === d.id)) {
-              encontrados.push({ id: d.id, _col: col, ...d.data() });
-            }
-          });
-        }
+        const newSnap = await getDoc(docRef);
+        setClienteData({ id: docRef.id, ...newSnap.data() });
+        return { found: true, isNew: true };
       }
 
-      if (encontrados.length === 0) return { status: 'notfound' };
-      if (encontrados.length === 1) return { status: 'found', cliente: encontrados[0] };
-      return { status: 'multiple', clientes: encontrados };
-    } catch (error) {
-      console.error('Error buscando cliente:', error);
-      return { status: 'notfound' };
-    }
-  };
-
-  // ── Login anónimo con datos del cliente ───────────────────────────────────
-  const loginConNombre = async (clienteData, telefono = null) => {
-    try {
-      const cred = await signInAnonymously(auth);
-      const uid  = cred.user.uid;
-
-      const tel = telefono || clienteData.telefono || '';
-      const userRef = doc(db, 'usuarios', uid);
-
-      await setDoc(userRef, {
-        uid,
-        nombre:         clienteData.nombre        || '',
-        apellido:       clienteData.apellido       || '',
-        nombreCompleto: clienteData.nombreCompleto || `${clienteData.nombre} ${clienteData.apellido}`.trim(),
-        telefono:       tel,
-        ultimoCorte:    clienteData.ultimoCorte    || null,
-        clienteRefId:   clienteData.id             || null,
-        creadoEn:       serverTimestamp(),
-        loginType:      'name',
-      }, { merge: true });
-
-      // Si tiene teléfono nuevo, actualizar también en "clientes"
-      if (telefono && clienteData.id) {
-        try {
-          const col = clienteData._col || 'clientes';
-          await updateDoc(doc(db, col, clienteData.id), { telefono });
-        } catch (_) {}
+      if (snap.size > 1 && !whatsapp) {
+        return { found: false, multipleFound: true, needsWhatsapp: true };
       }
 
-      setUser(cred.user);
-      setUserDoc({
-        uid,
-        nombre:         clienteData.nombre        || '',
-        apellido:       clienteData.apellido       || '',
-        nombreCompleto: clienteData.nombreCompleto || '',
-        telefono:       tel,
-        ultimoCorte:    clienteData.ultimoCorte    || null,
-      });
-      setNeedsProfile(false);
-      setIsAdmin(false);
-      toast.success(`¡Bienvenido, ${clienteData.nombre}!`);
-      return true;
+      let clienteDoc = snap.docs[0];
+      if (snap.size > 1 && whatsapp) {
+        const wNorm = whatsapp.replace(/\D/g, '');
+        clienteDoc = snap.docs.find(d => {
+          const w = (d.data().whatsapp || '').replace(/\D/g, '');
+          return w.endsWith(wNorm) || wNorm.endsWith(w);
+        }) || snap.docs[0];
+      }
+
+      await signInAnonymously(auth);
+      setClienteData({ id: clienteDoc.id, ...clienteDoc.data() });
+      return { found: true, isNew: false, data: clienteDoc.data() };
     } catch (error) {
-      console.error('Error en loginConNombre:', error);
-      toast.error('Error al iniciar sesión. Intentá de nuevo.');
-      return false;
+      console.error('loginByName error:', error);
+      return { found: false, error: error.message };
     }
   };
 
-  // ── Completar perfil (cliente sin nombre) ─────────────────────────────────
-  const completarPerfil = async (nombre, apellido) => {
-    if (!user) return false;
+  // ── Login por teléfono (legacy / admin viejo) ────────────────────────────
+  const setupRecaptcha = (elementId) => {
     try {
-      await updateDoc(doc(db, 'usuarios', user.uid), {
-        nombre, apellido,
-        nombreCompleto: `${nombre} ${apellido}`.trim(),
-      });
-      setUserDoc((prev) => ({
-        ...prev, nombre, apellido,
-        nombreCompleto: `${nombre} ${apellido}`.trim(),
-      }));
-      setNeedsProfile(false);
-      toast.success(`¡Bienvenido, ${nombre}!`);
-      return true;
+      if (window.recaptchaVerifier) {
+        window.recaptchaVerifier.clear();
+        window.recaptchaVerifier = null;
+      }
+      window.recaptchaVerifier = new RecaptchaVerifier(auth, elementId, { size: 'invisible' });
+      return window.recaptchaVerifier;
     } catch (error) {
-      toast.error('Error al guardar tu nombre');
-      return false;
+      console.error('Recaptcha error:', error);
+      throw error;
     }
   };
 
-  // ── Logout ────────────────────────────────────────────────────────────────
+  const sendVerificationCode = async (phoneNumber) => {
+    try {
+      const verifier = setupRecaptcha('recaptcha-container');
+      const result   = await signInWithPhoneNumber(auth, phoneNumber, verifier);
+      setConfirmationResult(result);
+      setVerificationId(result.verificationId);
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  };
+
+  const verifyCode = async (code) => {
+    try {
+      if (!confirmationResult) throw new Error('No hay confirmación pendiente');
+      await confirmationResult.confirm(code);
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error.message };
+    }
+  };
+
   const logout = async () => {
     try {
       await signOut(auth);
-      setUser(null);
-      setUserDoc(null);
+      setConfirmationResult(null);
+      setVerificationId(null);
       setNeedsProfile(false);
       setIsAdmin(false);
+      setClienteData(null);
       toast.success('Sesión cerrada');
       return true;
     } catch (error) {
@@ -189,36 +190,44 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // ── Admin: login por SMS (se mantiene para acceso admin) ──────────────────
-  const initRecaptcha = () => {
-    const { RecaptchaVerifier } = require('firebase/auth');
-    if (window.recaptchaVerifier) {
-      window.recaptchaVerifier.clear();
-      window.recaptchaVerifier = null;
+  const updateClienteVisitas = async (clienteId) => {
+    try {
+      const ref = doc(db, 'clientes', clienteId);
+      const snap = await getDoc(ref);
+      if (!snap.exists()) return;
+      const data      = snap.data();
+      const visitas   = (data.visitas || 0) + 1;
+      const descuento = visitas >= 10 ? 30 : visitas >= 5 ? 20 : visitas >= 3 ? 10 : 0;
+      await updateDoc(ref, { visitas, descuento, ultimaVisita: serverTimestamp() });
+      setClienteData(prev => ({ ...prev, visitas, descuento }));
+    } catch (error) {
+      console.error('Error actualizando visitas:', error);
     }
-    window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
-      size: 'invisible',
-      callback: () => {},
-      'expired-callback': () => { window.recaptchaVerifier = null; },
-    });
   };
 
   return (
-    <AuthContext.Provider value={{
-      user, userDoc, loading, needsProfile, isAdmin,
-      buscarClientePorNombre,
-      loginConNombre,
-      completarPerfil,
-      logout,
-      initRecaptcha,
-    }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isAdmin,
+        loading,
+        clienteData,
+        setClienteData,
+        needsProfile,
+        confirmationResult,
+        verificationId,
+        loginWithGoogle,
+        loginByName,
+        sendVerificationCode,
+        verifyCode,
+        logout,
+        updateClienteVisitas,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => {
-  const context = React.useContext(AuthContext);
-  if (!context) throw new Error('useAuth debe ser usado dentro de AuthProvider');
-  return context;
-};
+export const useAuth = () => useContext(AuthContext);
+export default AuthContext;
