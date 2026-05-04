@@ -332,15 +332,29 @@ const AdminPage = () => {
                     <div className="flex items-center gap-4 mb-2">
                       <div className="text-2xl font-bold text-gold">{turno.hora}</div>
                       <div>
-                        <div className="font-semibold text-white">{turno.telefono}</div>
+                        <div className="font-semibold text-white">
+  {turno.nombre || turno.clienteNombre || turno.telefono}
+</div>
                         <div className="text-sm text-gray-400">
                           {turno.servicio} - {turno.profesional}
                         </div>
                       </div>
                     </div>
-                    <div className="text-lg font-bold text-green-400">
-                      {formatPrice(turno.precioFinal)}
-                    </div>
+                  <div className="flex items-center gap-3">
+  <div className="text-lg font-bold text-green-400">
+    {formatPrice(turno.precioFinal)}
+  </div>
+  {turno.telefono && (
+    
+      href={`https://wa.me/${turno.telefono.replace(/\D/g, '')}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 px-3 py-1 bg-green-600 hover:bg-green-500 text-white text-xs font-medium rounded transition"
+    >
+      📱 WhatsApp
+    </a>
+  )}
+</div>
                   </div>
 
                   <div className="flex items-center gap-3">
