@@ -19,7 +19,7 @@ import {
   getDocs,
   serverTimestamp,
 } from 'firebase/firestore';
-import { auth, db } from '../firebase';
+import { auth, db } from '../services/firebase';
 import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
