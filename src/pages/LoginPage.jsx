@@ -1,4 +1,44 @@
-import React, { useState } from 'react';
+const handleNameSubmit = async (e) => {
+  e.preventDefault();
+  setError('');
+  if (!nombre.trim() || !apellido.trim()) {
+    setError('Ingresá tu nombre y apellido');
+    return;
+  }
+  setLoading(true);
+  const result = await buscarClientePorNombre(capitalize(nombre), capitalize(apellido));
+
+  if (result.status === 'found') {
+    if (result.cliente.whatsapp) {
+      const ok = await loginConNombre(result.cliente, null);
+      if (ok) navigate('/reservar');
+      else setError('Error al iniciar sesión. Intentá de nuevo.');
+    } else {
+      setClienteEncontrado(result.cliente);
+      setWhatsappReason('notfound');
+      setStep('whatsapp');
+    }
+  } else if (result.status === 'multiple') {
+    setWhatsappReason('multiple');
+    setStep('whatsapp');
+  } else {
+    setWhatsappReason('notfound');
+    setStep('whatsapp');
+  }
+  setLoading(false);
+};
+Después push:
+bashgit add .
+git commit -m "fix: pedir whatsapp si cliente no tiene número guardado"
+git push
+👀import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { FiUser, FiPhone, FiChevronRight, FiArrowLeft } from 'react-icons/fi';
+
+const LoginPagepasted12:35Claude ha respondido: El archivo sigue roto — le falta el cierre de handleNameSubmit.Identified incomplete code requiring comprehensive correctionIdentified incomplete code requiring comprehensive correctionEl archivo sigue roto — le falta el cierre de handleNameSubmit. Hacé Ctrl+A, borrá todo y pegá esto completo:
+jsximport React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -8,13 +48,13 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const { buscarClientePorNombre, loginConNombre } = useAuth();
 
-  const [step, setStep] = useState('name'); // 'name' | 'whatsapp'
+  const [step, setStep] = useState('name');
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [telefono, setTelefono] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [whatsappReason, setWhatsappReason] = useState(''); // 'multiple' | 'notfound'
+  const [whatsappReason, setWhatsappReason] = useState('');
   const [clienteEncontrado, setClienteEncontrado] = useState(null);
 
   const capitalize = (str) =>
@@ -31,9 +71,15 @@ const LoginPage = () => {
     const result = await buscarClientePorNombre(capitalize(nombre), capitalize(apellido));
 
     if (result.status === 'found') {
-      const ok = await loginConNombre(result.cliente, null);
-      if (ok) navigate('/reservar');
-      else setError('Error al iniciar sesión. Intentá de nuevo.');
+      if (result.cliente.whatsapp) {
+        const ok = await loginConNombre(result.cliente, null);
+        if (ok) navigate('/reservar');
+        else setError('Error al iniciar sesión. Intentá de nuevo.');
+      } else {
+        setClienteEncontrado(result.cliente);
+        setWhatsappReason('notfound');
+        setStep('whatsapp');
+      }
     } else if (result.status === 'multiple') {
       setWhatsappReason('multiple');
       setStep('whatsapp');
@@ -68,7 +114,6 @@ const LoginPage = () => {
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="w-full max-w-md">
 
-        {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gold mb-2">Salón de los Dioses</h1>
           <p className="text-gray-400 text-sm">Reservá tu turno online</p>
@@ -76,7 +121,6 @@ const LoginPage = () => {
 
         <div className="bg-gray-900 border border-gold/30 rounded-xl p-8 shadow-2xl">
 
-          {/* STEP: nombre + apellido */}
           {step === 'name' && (
             <form onSubmit={handleNameSubmit} className="space-y-5">
               <div className="text-center mb-6">
@@ -136,7 +180,6 @@ const LoginPage = () => {
             </form>
           )}
 
-          {/* STEP: whatsapp */}
           {step === 'whatsapp' && (
             <form onSubmit={handleWhatsappSubmit} className="space-y-5">
               <div className="text-center mb-6">
@@ -150,7 +193,6 @@ const LoginPage = () => {
                 </h2>
               </div>
 
-              {/* Explicación */}
               <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
                 <p className="text-green-400 text-sm leading-relaxed">
                   {whatsappReason === 'multiple'

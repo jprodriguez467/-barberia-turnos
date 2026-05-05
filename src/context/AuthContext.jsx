@@ -76,9 +76,6 @@ export const AuthProvider = ({ children }) => {
 
   const buscarClientePorNombre = async (nombre, apellido) => {
     try {
-      if (!auth.currentUser) {
-        await signInAnonymously(auth);
-      }
       const nombreNorm   = nombre.trim().toLowerCase();
       const apellidoNorm = apellido.trim().toLowerCase();
       const q = query(
@@ -98,9 +95,7 @@ export const AuthProvider = ({ children }) => {
 
   const loginConNombre = async (cliente, telefono) => {
     try {
-      if (!auth.currentUser) {
-        await signInAnonymously(auth);
-      }
+      await signInAnonymously(auth);
       if (cliente.id) {
         if (telefono) {
           await updateDoc(doc(db, 'clientes', cliente.id), { whatsapp: telefono });
