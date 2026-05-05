@@ -24,25 +24,22 @@ import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
 
-// ── Admins: tu email de Google + tu número de teléfono ──────────────────────
-const ADMIN_EMAILS = ['jprodriguez467@gmail.com']; // ← poné tu email real de Google
+const ADMIN_EMAILS = ['jprodriguez467@gmail.com'];
 const ADMIN_PHONES = ['+5493425459653', '+543425459653'];
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser]                       = useState(null);
-  const [isAdmin, setIsAdmin]                 = useState(false);
-  const [loading, setLoading]                 = useState(true);
+  const [user, setUser]                             = useState(null);
+  const [isAdmin, setIsAdmin]                       = useState(false);
+  const [loading, setLoading]                       = useState(true);
   const [confirmationResult, setConfirmationResult] = useState(null);
-  const [verificationId, setVerificationId]   = useState(null);
-  const [needsProfile, setNeedsProfile]       = useState(false);
-  const [clienteData, setClienteData]         = useState(null);
+  const [verificationId, setVerificationId]         = useState(null);
+  const [needsProfile, setNeedsProfile]             = useState(false);
+  const [clienteData, setClienteData]               = useState(null);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-
-        // Chequeo admin por email (Google) o por teléfono
         const tel   = currentUser.phoneNumber;
         const email = currentUser.email;
         const adminCheck =
@@ -61,15 +58,12 @@ export const AuthProvider = ({ children }) => {
     return () => unsub();
   }, []);
 
-  // ── Login con Google (solo admin) ────────────────────────────────────────
   const loginWithGoogle = async () => {
     try {
       const provider = new GoogleAuthProvider();
       const result   = await signInWithPopup(auth, provider);
       const email    = result.user.email;
-
       if (!ADMIN_EMAILS.includes(email)) {
-        // No es admin → cerramos sesión y devolvemos error
         await signOut(auth);
         return { success: false, error: 'Este correo no tiene acceso como administrador.' };
       }
@@ -80,45 +74,88 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // ── Login por nombre (clientes) ──────────────────────────────────────────
-  const loginByName = async (nombre, apellido, whatsapp = null) => {
+  const buscarClientePorNombre = async (nombre, apellido) => {
     try {
+      if (!auth.currentUser) {
+        await signInAnonymously(auth);
+      }
       const nombreNorm   = nombre.trim().toLowerCase();
       const apellidoNorm = apellido.trim().toLowerCase();
-
-      const clientesRef = collection(db, 'clientes');
       const q = query(
-        clientesRef,
+        collection(db, 'clientes'),
         where('nombreNorm', '==', nombreNorm),
         where('apellidoNorm', '==', apellidoNorm)
       );
       const snap = await getDocs(q);
+      if (snap.empty)    return { status: 'notfound' };
+      if (snap.size > 1) return { status: 'multiple' };
+      return { status: 'found', cliente: { id: snap.docs[0].id, ...snap.docs[0].data() } };
+    } catch (error) {
+      console.error('buscarClientePorNombre error:', error);
+      return { status: 'error' };
+    }
+  };
 
-      if (snap.empty) {
-        // Cliente nuevo
-        if (!whatsapp) return { found: false, needsWhatsapp: true };
-
+  const loginConNombre = async (cliente, telefono) => {
+    try {
+      if (!auth.currentUser) {
         await signInAnonymously(auth);
-        const docRef = doc(clientesRef);
+      }
+      if (cliente.id) {
+        if (telefono) {
+          await updateDoc(doc(db, 'clientes', cliente.id), { whatsapp: telefono });
+        }
+        const snap = await getDoc(doc(db, 'clientes', cliente.id));
+        setClienteData({ id: snap.id, ...snap.data() });
+      } else {
+        const docRef = doc(collection(db, 'clientes'));
         await setDoc(docRef, {
-          nombre:       nombre.trim(),
-          apellido:     apellido.trim(),
-          nombreNorm,
-          apellidoNorm,
-          whatsapp,
+          nombre:       cliente.nombre,
+          apellido:     cliente.apellido,
+          nombreNorm:   cliente.nombre.trim().toLowerCase(),
+          apellidoNorm: cliente.apellido.trim().toLowerCase(),
+          whatsapp:     telefono,
           visitas:      0,
           descuento:    0,
           creadoEn:     serverTimestamp(),
         });
         const newSnap = await getDoc(docRef);
         setClienteData({ id: docRef.id, ...newSnap.data() });
+      }
+      return true;
+    } catch (error) {
+      console.error('loginConNombre error:', error);
+      return false;
+    }
+  };
+
+  const loginByName = async (nombre, apellido, whatsapp = null) => {
+    try {
+      const nombreNorm   = nombre.trim().toLowerCase();
+      const apellidoNorm = apellido.trim().toLowerCase();
+      const clientesRef  = collection(db, 'clientes');
+      const q = query(
+        clientesRef,
+        where('nombreNorm', '==', nombreNorm),
+        where('apellidoNorm', '==', apellidoNorm)
+      );
+      const snap = await getDocs(q);
+      if (snap.empty) {
+        if (!whatsapp) return { found: false, needsWhatsapp: true };
+        await signInAnonymously(auth);
+        const docRef = doc(clientesRef);
+        await setDoc(docRef, {
+          nombre: nombre.trim(), apellido: apellido.trim(),
+          nombreNorm, apellidoNorm, whatsapp,
+          visitas: 0, descuento: 0, creadoEn: serverTimestamp(),
+        });
+        const newSnap = await getDoc(docRef);
+        setClienteData({ id: docRef.id, ...newSnap.data() });
         return { found: true, isNew: true };
       }
-
       if (snap.size > 1 && !whatsapp) {
         return { found: false, multipleFound: true, needsWhatsapp: true };
       }
-
       let clienteDoc = snap.docs[0];
       if (snap.size > 1 && whatsapp) {
         const wNorm = whatsapp.replace(/\D/g, '');
@@ -127,7 +164,6 @@ export const AuthProvider = ({ children }) => {
           return w.endsWith(wNorm) || wNorm.endsWith(w);
         }) || snap.docs[0];
       }
-
       await signInAnonymously(auth);
       setClienteData({ id: clienteDoc.id, ...clienteDoc.data() });
       return { found: true, isNew: false, data: clienteDoc.data() };
@@ -137,7 +173,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // ── Login por teléfono (legacy / admin viejo) ────────────────────────────
   const setupRecaptcha = (elementId) => {
     try {
       if (window.recaptchaVerifier) {
@@ -192,7 +227,7 @@ export const AuthProvider = ({ children }) => {
 
   const updateClienteVisitas = async (clienteId) => {
     try {
-      const ref = doc(db, 'clientes', clienteId);
+      const ref  = doc(db, 'clientes', clienteId);
       const snap = await getDoc(ref);
       if (!snap.exists()) return;
       const data      = snap.data();
@@ -218,6 +253,8 @@ export const AuthProvider = ({ children }) => {
         verificationId,
         loginWithGoogle,
         loginByName,
+        buscarClientePorNombre,
+        loginConNombre,
         sendVerificationCode,
         verifyCode,
         logout,
