@@ -346,7 +346,7 @@ const AdminPage = () => {
   </div>
   {turno.telefono && (
     
-      href={`https://wa.me/${turno.telefono.replace(/\D/g, '')}`}
+      <a href={`https://wa.me/${turno.telefono.replace(/\D/g, '')}`}
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 px-3 py-1 bg-green-600 hover:bg-green-500 text-white text-xs font-medium rounded transition"
