@@ -68,7 +68,7 @@ const HORARIOS = [
 
 const ReservarPage = () => {
   const navigate = useNavigate();
-  const { user, userDoc, logout } = useAuth();
+  const { user, clienteData, logout } = useAuth();
 
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedService, setSelectedService] = useState(null);
@@ -80,7 +80,7 @@ const ReservarPage = () => {
   const [confirming, setConfirming] = useState(false);
   const [servicios, setServicios] = useState(DEFAULT_SERVICIOS);
   const [profesionales, setProfesionales] = useState(DEFAULT_PROFESIONALES);
-  const [turnoConfirmado, setTurnoConfirmado] = useState(null); // datos del turno confirmado
+  const [turnoConfirmado, setTurnoConfirmado] = useState(null);
 
   useEffect(() => {
     const loadData = async () => {
@@ -108,7 +108,7 @@ const ReservarPage = () => {
   }, []);
 
   const calculatePrice = (service) => {
-    const ultimoCorteRaw = userDoc?.ultimoCorte || userDoc?.ultimoTurno;
+    const ultimoCorteRaw = clienteData?.ultimoCorte || clienteData?.ultimoTurno;
     if (!ultimoCorteRaw) return { price: service.precios.normal, discount: null, message: null };
     const lastCorte = ultimoCorteRaw.toDate ? ultimoCorteRaw.toDate() : new Date(ultimoCorteRaw);
     const diffDays = Math.floor((Date.now() - lastCorte.getTime()) / (1000 * 60 * 60 * 24));
@@ -162,8 +162,8 @@ const ReservarPage = () => {
 
       await addDoc(collection(db, 'turnos'), {
         usuarioId: user.uid,
-        telefono: user.phoneNumber || userDoc?.telefono || '',
-        nombreCliente: userDoc?.nombreCompleto || userDoc?.nombre || '',
+        telefono: clienteData?.whatsapp || user.phoneNumber || '',
+        nombreCliente: clienteData?.nombreCompleto || clienteData?.nombre || '',
         servicio: selectedService.id,
         profesional: selectedProfesional.id,
         fecha: dateStr,
@@ -175,18 +175,19 @@ const ReservarPage = () => {
         creadoEn: serverTimestamp(),
       });
 
-      await updateDoc(doc(db, 'usuarios', user.uid), {
-        ultimoCorte: serverTimestamp(),
-      });
+      if (clienteData?.id) {
+        await updateDoc(doc(db, 'clientes', clienteData.id), {
+          ultimoCorte: serverTimestamp(),
+        });
+      }
 
-      // Guardar datos para la pantalla de éxito
       setTurnoConfirmado({
         servicio: selectedService.nombre,
         profesional: selectedProfesional.nombre,
         fecha: selectedDate.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }),
         hora: selectedTime,
         precio: formatPrice(priceInfo.price),
-        nombre: userDoc?.nombre || '',
+        nombre: clienteData?.nombre || '',
       });
     } catch (error) {
       console.error('Error confirmando turno:', error);
@@ -196,24 +197,18 @@ const ReservarPage = () => {
     }
   };
 
-  // ── Pantalla de ÉXITO ─────────────────────────────────────────────────────
   const renderSuccess = () => (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 flex items-center justify-center px-4">
       <div className="w-full max-w-md text-center">
-
-        {/* Ícono animado */}
         <div className="flex items-center justify-center mb-6">
           <div className="w-24 h-24 bg-green-500/10 border-2 border-green-500/40 rounded-full flex items-center justify-center">
             <span className="text-5xl">👍</span>
           </div>
         </div>
-
         <h1 className="text-3xl font-bold text-green-400 mb-2">¡Turno confirmado!</h1>
         <p className="text-gray-400 text-lg mb-8">
           Te esperamos{turnoConfirmado.nombre ? `, ${turnoConfirmado.nombre}` : ''}
         </p>
-
-        {/* Tarjeta resumen */}
         <div className="bg-gray-900 border border-green-500/20 rounded-xl p-6 mb-8 text-left space-y-3">
           <div className="flex justify-between">
             <span className="text-gray-400">Servicio</span>
@@ -236,7 +231,6 @@ const ReservarPage = () => {
             <span className="text-gold font-bold text-lg">{turnoConfirmado.precio}</span>
           </div>
         </div>
-
         <button
           onClick={() => {
             setTurnoConfirmado(null);
@@ -285,8 +279,8 @@ const ReservarPage = () => {
   const renderStep1 = () => (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gold text-center mb-6">Elige tu servicio</h2>
-      {(userDoc?.ultimoCorte || userDoc?.ultimoTurno) && (() => {
-        const raw = userDoc?.ultimoCorte || userDoc?.ultimoTurno;
+      {(clienteData?.ultimoCorte || clienteData?.ultimoTurno) && (() => {
+        const raw = clienteData?.ultimoCorte || clienteData?.ultimoTurno;
         const fecha = raw.toDate ? raw.toDate() : new Date(raw);
         const dias = Math.floor((Date.now() - fecha.getTime()) / (1000 * 60 * 60 * 24));
         const restantes = 15 - dias;
@@ -492,7 +486,6 @@ const ReservarPage = () => {
 
   const prevStep = () => setCurrentStep((prev) => Math.max(prev - 1, 1));
 
-  // Mostrar pantalla de éxito
   if (turnoConfirmado) return renderSuccess();
 
   if (loading) {
@@ -513,7 +506,7 @@ const ReservarPage = () => {
           <h1 className="text-2xl font-bold text-gold">Salón de los Dioses</h1>
           <div className="flex items-center gap-4">
             <div className="text-sm text-gray-400">
-              {userDoc?.nombreCompleto || userDoc?.nombre || user?.phoneNumber}
+              {clienteData?.nombreCompleto || clienteData?.nombre || user?.phoneNumber}
             </div>
             <button onClick={logout} className="px-4 py-2 bg-gold text-black font-semibold rounded hover:bg-gold/90 transition">
               Cerrar sesión
