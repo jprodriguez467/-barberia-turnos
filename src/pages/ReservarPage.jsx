@@ -151,6 +151,7 @@ const ReservarPage = () => {
     new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0 }).format(price);
 
   const confirmTurno = async () => {
+    console.log('user:', user, 'clienteData:', clienteData);
     if (!selectedService || !selectedProfesional || !selectedDate || !selectedTime) {
       toast.error('Completá todos los pasos antes de confirmar');
       return;
