@@ -176,11 +176,17 @@ const ReservarPage = () => {
         creadoEn: serverTimestamp(),
       });
 
-      if (clienteData?.id) {
-        await updateDoc(doc(db, 'clientes', clienteData.id), {
-          ultimoCorte: serverTimestamp(),
-        });
-      }
+     try {
+  if (clienteData?.id) {
+    const { setDoc: setDocument } = await import('firebase/firestore');
+    await setDocument(doc(db, 'clientes', clienteData.id), 
+      { ultimoCorte: serverTimestamp() }, 
+      { merge: true }
+    );
+  }
+} catch (e) {
+  console.warn('No se pudo actualizar ultimoCorte:', e.message);
+}
 
       setTurnoConfirmado({
         servicio: selectedService.nombre,
