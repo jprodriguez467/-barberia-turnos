@@ -163,6 +163,7 @@ const ReservarPage = () => {
 
       await addDoc(collection(db, 'turnos'), {
         usuarioId: user.uid,
+        clienteId: clienteData?.id || null,
         telefono: clienteData?.whatsapp || user.phoneNumber || '',
         nombreCliente: clienteData?.nombreCompleto || clienteData?.nombre || '',
         servicio: selectedService.id,

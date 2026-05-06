@@ -219,7 +219,7 @@ const AdminPage = () => {
   // ── NUEVO: Cargar clientes con su historial de cortes ─────────────────────
   const loadClientes = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, 'usuarios'));
+      const querySnapshot = await getDocs(collection(db, 'clientes'));
       const lista = [];
       querySnapshot.forEach((doc) => {
         lista.push({ id: doc.id, ...doc.data() });
@@ -239,7 +239,7 @@ const AdminPage = () => {
   // ── NUEVO: Registrar corte manualmente desde el panel de admin ────────────
   const registrarCorteManual = async (clienteId) => {
     try {
-      await updateDoc(doc(db, 'usuarios', clienteId), {
+      await updateDoc(doc(db, 'clientes', clienteId), {
         ultimoCorte: serverTimestamp(),
       });
       toast.success('Corte registrado');
@@ -262,8 +262,8 @@ const AdminPage = () => {
       // Si el turno se completa → actualizar ultimoCorte del cliente
       if (nuevoEstado === 'completado') {
         const turno = turnosHoy.find((t) => t.id === turnoId);
-        if (turno?.usuarioId) {
-          await updateDoc(doc(db, 'usuarios', turno.usuarioId), {
+        if (turno?.clienteId) {
+          await updateDoc(doc(db, 'clientes', turno.clienteId), {
             ultimoCorte: serverTimestamp(),
           });
         }
